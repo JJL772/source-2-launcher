@@ -16,5 +16,6 @@
 /* Called by the main launcher after being loaded in */
 LAUNCHER_API int Run(void* param)
 {
+	printf("This is a test!!!!!!!!!!!!\n\n\n\n\n\n\n\n");
 	return 0;
 }

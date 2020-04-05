@@ -440,3 +440,18 @@ cleanup:
 		CloseHandle(hproc);
 	return nullptr;
 }
+
+int Plat_CreateProcess(const char* application, char* cmdline)
+{
+	STARTUPINFOA info;
+	PROCESS_INFORMATION procinfo;
+	ZeroMemory(&info, sizeof(STARTUPINFOA));
+	ZeroMemory(&procinfo, sizeof(PROCESS_INFORMATION));
+
+	BOOL ret = CreateProcess(application, (LPSTR)cmdline, NULL, NULL, FALSE, NORMAL_PRIORITY_CLASS, NULL, 
+		NULL, &info, &procinfo);
+
+	if(ret == FALSE) return 0;
+
+	return procinfo.dwProcessId;
+}

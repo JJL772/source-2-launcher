@@ -31,25 +31,18 @@ char *module;
 
 int main(int argc, char **argv)
 {
-	int opt = 0;
-	while ((opt = getopt(argc, argv, "f:i:h")) != -1)
+	printf("Attempting to launcher hlvr.exe\n");
+
+	g_hla_pid = Plat_CreateProcess("hlvr.exe", "-windowed -dev -console -vconport 29000 +map startup");
+
+	if(!g_hla_pid)
 	{
-		switch (opt)
-		{
-		case 'f':
-			module = strdup(optarg);
-			break;
-		case 'i':
-			interfaces.push_back(strdup(optarg));
-			break;
-		case 'h':
-			show_help();
-			break;
-		default:
-			show_help();
-			break;
-		}
+		printf("Failed to load hlvr.exe!\n");
+		exit(1);
 	}
+
+	/* Try to load the launcher */
+	LoadLauncher();
 
 	return 0;
 }

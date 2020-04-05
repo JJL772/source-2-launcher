@@ -11,8 +11,6 @@
  * 		void Init(); Called once all modules are loaded and module info has been resolved 
  * 
  */ 
-#pragma once
-
 #include <filesystem>
 #include <fstream>
 #include <iostream>
@@ -28,13 +26,6 @@
 #endif 
 
 using namespace std::filesystem;
-
-typedef const char*(*fnGetModuleName_t)();
-typedef const char*(*fnGetModuleDescription_t)();
-typedef const char*(*fnGetModuleAuthor_t)();
-typedef void*(*fnGetModuleInterface_t)();
-typedef void(*fnPreInit_t)();
-typedef void(*fnInit_t)();
 
 /**
  * GetModuleInterface

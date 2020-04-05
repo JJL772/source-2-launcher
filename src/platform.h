@@ -82,3 +82,6 @@ bool Plat_InjectModule(int pid, const char* name);
 
 /* Returns a handle to a module in another process's memory */
 void* Plat_GetModuleHandle(int pid, const char* lib);
+
+/* Creates a new process, returns 0 if the process did not start */
+int Plat_CreateProcess(const char* application, char* cmdline);
