@@ -338,7 +338,52 @@ void Plat_FreePage(int pid, void* pg, size_t sz)
 	if(!g_proc_handle) CloseHandle(hproc);
 }
 
+namespace injectpayload {
+#include "payloads/injectpayload.h"
+}
+
+
 bool Plat_InjectModule(int pid, const char* mod)
 {
-	
+	bool retval = false;
+	HANDLE hproc = g_proc_handle ? g_proc_handle : OpenProcess(PROCESS_ALL_ACCESS, FALSE, (DWORD)pid);
+	HANDLE hthread;
+	SIZE_T sz;
+	DWORD threadid = 0x0;
+	LPVOID LoadLib_Addr;
+
+	/* Allocate a couple of pages in the target's memory space, where we will put our code */
+	void* addr = VirtualAllocEx(hproc, NULL, 16384, MEM_COMMIT, PAGE_EXECUTE_READWRITE);
+
+	if(!addr)
+	{
+		retval = false;
+		goto cleanup;
+	}
+
+	/* Write our injection payload into the new page */
+	if(WriteProcessMemory(hproc, addr, injectpayload::shellcode, sizeof(injectpayload::shellcode), &sz) != TRUE)
+	{
+		retval = false;
+		goto cleanup;
+	}
+
+	/* Get the handle of LoadLibraryA */
+	LoadLib_Addr = GetProcAddress(GetModuleHandle("Kernel32"), "LoadLibraryA");
+
+	if(!LoadLib_Addr)
+	{
+		retval = false;
+		goto cleanup;
+	}
+
+	/* Create a new thread to perform the injection */
+	hthread = CreateRemoteThread(hproc, NULL, 0, (LPTHREAD_START_ROUTINE)LoadLib_Addr, (LPVOID)mod, 0, &threadid);
+
+	WaitForSingleObject(hthread, INFINITE);
+
+	VirtualFreeEx(hproc, addr, 16384, MEM_DECOMMIT);
+
+cleanup:
+	if(!g_proc_handle) CloseHandle(hproc);
 }
