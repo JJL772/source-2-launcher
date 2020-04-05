@@ -1,0 +1,29 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/**"
+            ],
+            "defines": ["UNIX"],
+            "compilerPath": "/usr/bin/clang"
+		},
+		{
+			"name": "Windows",
+			"includePath": [
+				"/usr/x86_64-w64-mingw32/include/",
+				"${workspaceFolder}/**"
+			],
+			"defines": [
+				"WIN32",
+				"_WIN32",
+				"WIN64",
+				"_WIN64",
+				"WINDOWS"
+			],
+			"intelliSenseMode": "gcc-x64",
+			"compilerPath": "/usr/bin/x86_64-w64-mingw32-g++"
+		}
+    ],
+    "version": 4
+}

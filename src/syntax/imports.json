@@ -1,0 +1,534 @@
+[
+	{
+		"ordinal": 1,
+		"bind": "NONE",
+		"type": "FUNC",
+		"name": "KERNEL32.dll_GetModuleHandleA",
+		"plt": 6442680320
+	},
+	{
+		"ordinal": 2,
+		"bind": "NONE",
+		"type": "FUNC",
+		"name": "KERNEL32.dll_GetCurrentThreadId",
+		"plt": 6442680328
+	},
+	{
+		"ordinal": 3,
+		"bind": "NONE",
+		"type": "FUNC",
+		"name": "KERNEL32.dll_RtlUnwindEx",
+		"plt": 6442680336
+	},
+	{
+		"ordinal": 4,
+		"bind": "NONE",
+		"type": "FUNC",
+		"name": "KERNEL32.dll_InitializeSListHead",
+		"plt": 6442680344
+	},
+	{
+		"ordinal": 5,
+		"bind": "NONE",
+		"type": "FUNC",
+		"name": "KERNEL32.dll_GetSystemTimeAsFileTime",
+		"plt": 6442680352
+	},
+	{
+		"ordinal": 6,
+		"bind": "NONE",
+		"type": "FUNC",
+		"name": "KERNEL32.dll_GetCurrentProcessId",
+		"plt": 6442680360
+	},
+	{
+		"ordinal": 7,
+		"bind": "NONE",
+		"type": "FUNC",
+		"name": "KERNEL32.dll_QueryPerformanceCounter",
+		"plt": 6442680368
+	},
+	{
+		"ordinal": 8,
+		"bind": "NONE",
+		"type": "FUNC",
+		"name": "KERNEL32.dll_DisableThreadLibraryCalls",
+		"plt": 6442680376
+	},
+	{
+		"ordinal": 9,
+		"bind": "NONE",
+		"type": "FUNC",
+		"name": "KERNEL32.dll_SleepConditionVariableSRW",
+		"plt": 6442680384
+	},
+	{
+		"ordinal": 10,
+		"bind": "NONE",
+		"type": "FUNC",
+		"name": "KERNEL32.dll_WakeAllConditionVariable",
+		"plt": 6442680392
+	},
+	{
+		"ordinal": 11,
+		"bind": "NONE",
+		"type": "FUNC",
+		"name": "KERNEL32.dll_AcquireSRWLockExclusive",
+		"plt": 6442680400
+	},
+	{
+		"ordinal": 12,
+		"bind": "NONE",
+		"type": "FUNC",
+		"name": "KERNEL32.dll_ReleaseSRWLockExclusive",
+		"plt": 6442680408
+	},
+	{
+		"ordinal": 13,
+		"bind": "NONE",
+		"type": "FUNC",
+		"name": "KERNEL32.dll_InterlockedFlushSList",
+		"plt": 6442680416
+	},
+	{
+		"ordinal": 1,
+		"bind": "NONE",
+		"type": "FUNC",
+		"name": "USER32.dll_GetDesktopWindow",
+		"plt": 6442680432
+	},
+	{
+		"ordinal": 2,
+		"bind": "NONE",
+		"type": "FUNC",
+		"name": "USER32.dll_DialogBoxParamA",
+		"plt": 6442680440
+	},
+	{
+		"ordinal": 3,
+		"bind": "NONE",
+		"type": "FUNC",
+		"name": "USER32.dll_EndDialog",
+		"plt": 6442680448
+	},
+	{
+		"ordinal": 4,
+		"bind": "NONE",
+		"type": "FUNC",
+		"name": "USER32.dll_SetWindowPos",
+		"plt": 6442680456
+	},
+	{
+		"ordinal": 5,
+		"bind": "NONE",
+		"type": "FUNC",
+		"name": "USER32.dll_GetWindowRect",
+		"plt": 6442680464
+	},
+	{
+		"ordinal": 6,
+		"bind": "NONE",
+		"type": "FUNC",
+		"name": "USER32.dll_SetDlgItemTextA",
+		"plt": 6442680472
+	},
+	{
+		"ordinal": 1,
+		"bind": "NONE",
+		"type": "FUNC",
+		"name": "tier0.dll_V_vsnprintf",
+		"plt": 6442680488
+	},
+	{
+		"ordinal": 2,
+		"bind": "NONE",
+		"type": "FUNC",
+		"name": "tier0.dll_?LoggingSystem_Log@@YA?AW4LoggingResponse_t@@HW4LoggingSeverity_t@@VColor@@PEBDZZ",
+		"plt": 6442680496
+	},
+	{
+		"ordinal": 3,
+		"bind": "NONE",
+		"type": "FUNC",
+		"name": "tier0.dll_?LoggingSystem_Log@@YA?AW4LoggingResponse_t@@HW4LoggingSeverity_t@@PEBULoggingMetaData_t@@PEBDZZ",
+		"plt": 6442680504
+	},
+	{
+		"ordinal": 4,
+		"bind": "NONE",
+		"type": "FUNC",
+		"name": "tier0.dll_?SpinLockForWrite@CThreadSpinRWLock@@AEAAXPEBDHI@Z",
+		"plt": 6442680512
+	},
+	{
+		"ordinal": 5,
+		"bind": "NONE",
+		"type": "FUNC",
+		"name": "tier0.dll_?UnlockWrite@CThreadSpinRWLock@@QEAAXPEBDH@Z",
+		"plt": 6442680520
+	},
+	{
+		"ordinal": 6,
+		"bind": "NONE",
+		"type": "FUNC",
+		"name": "tier0.dll_InvokeMiniDumpHandler",
+		"plt": 6442680528
+	},
+	{
+		"ordinal": 7,
+		"bind": "NONE",
+		"type": "FUNC",
+		"name": "tier0.dll_Plat_UnloadModule",
+		"plt": 6442680536
+	},
+	{
+		"ordinal": 8,
+		"bind": "NONE",
+		"type": "FUNC",
+		"name": "tier0.dll_?Lock@CThreadFastMutex@@AECAXPEBDHII@Z",
+		"plt": 6442680544
+	},
+	{
+		"ordinal": 9,
+		"bind": "NONE",
+		"type": "FUNC",
+		"name": "tier0.dll_Plat_ShouldCollectMiniDumpsForFatalErrors",
+		"plt": 6442680552
+	},
+	{
+		"ordinal": 10,
+		"bind": "NONE",
+		"type": "FUNC",
+		"name": "tier0.dll_V_atoi",
+		"plt": 6442680560
+	},
+	{
+		"ordinal": 11,
+		"bind": "NONE",
+		"type": "FUNC",
+		"name": "tier0.dll_Plat_LoadModule",
+		"plt": 6442680568
+	},
+	{
+		"ordinal": 12,
+		"bind": "NONE",
+		"type": "FUNC",
+		"name": "tier0.dll_Msg",
+		"plt": 6442680576
+	},
+	{
+		"ordinal": 13,
+		"bind": "NONE",
+		"type": "FUNC",
+		"name": "tier0.dll_LoggingSystem_RegisterLoggingChannel",
+		"plt": 6442680584
+	},
+	{
+		"ordinal": 14,
+		"bind": "NONE",
+		"type": "FUNC",
+		"name": "tier0.dll_LOG_GENERAL",
+		"plt": 6442680592
+	},
+	{
+		"ordinal": 15,
+		"bind": "NONE",
+		"type": "FUNC",
+		"name": "tier0.dll_V_snprintf",
+		"plt": 6442680600
+	},
+	{
+		"ordinal": 16,
+		"bind": "NONE",
+		"type": "FUNC",
+		"name": "tier0.dll_Plat_GetModuleProcAddress",
+		"plt": 6442680608
+	},
+	{
+		"ordinal": 17,
+		"bind": "NONE",
+		"type": "FUNC",
+		"name": "tier0.dll_GetDefaultMiniDumpTypeFlags",
+		"plt": 6442680616
+	},
+	{
+		"ordinal": 18,
+		"bind": "NONE",
+		"type": "FUNC",
+		"name": "tier0.dll__V_strncpy",
+		"plt": 6442680624
+	},
+	{
+		"ordinal": 19,
+		"bind": "NONE",
+		"type": "FUNC",
+		"name": "tier0.dll_Plat_DebugPrint",
+		"plt": 6442680632
+	},
+	{
+		"ordinal": 20,
+		"bind": "NONE",
+		"type": "FUNC",
+		"name": "tier0.dll_V_qsort_s",
+		"plt": 6442680640
+	},
+	{
+		"ordinal": 21,
+		"bind": "NONE",
+		"type": "FUNC",
+		"name": "tier0.dll_V_fpclassify",
+		"plt": 6442680648
+	},
+	{
+		"ordinal": 22,
+		"bind": "NONE",
+		"type": "FUNC",
+		"name": "tier0.dll_V_isnan",
+		"plt": 6442680656
+	},
+	{
+		"ordinal": 23,
+		"bind": "NONE",
+		"type": "FUNC",
+		"name": "tier0.dll__V_strncmp",
+		"plt": 6442680664
+	},
+	{
+		"ordinal": 24,
+		"bind": "NONE",
+		"type": "FUNC",
+		"name": "tier0.dll_V_atoi64",
+		"plt": 6442680672
+	},
+	{
+		"ordinal": 25,
+		"bind": "NONE",
+		"type": "FUNC",
+		"name": "tier0.dll_V_atoui64",
+		"plt": 6442680680
+	},
+	{
+		"ordinal": 26,
+		"bind": "NONE",
+		"type": "FUNC",
+		"name": "tier0.dll_Warning",
+		"plt": 6442680688
+	},
+	{
+		"ordinal": 27,
+		"bind": "NONE",
+		"type": "FUNC",
+		"name": "tier0.dll_V_atofloat64",
+		"plt": 6442680696
+	},
+	{
+		"ordinal": 28,
+		"bind": "NONE",
+		"type": "FUNC",
+		"name": "tier0.dll_?Insert@CBufferString@@QEAAPEBDHPEBDH_N@Z",
+		"plt": 6442680704
+	},
+	{
+		"ordinal": 29,
+		"bind": "NONE",
+		"type": "FUNC",
+		"name": "tier0.dll_?Format@CBufferString@@QEAAHPEBDZZ",
+		"plt": 6442680712
+	},
+	{
+		"ordinal": 30,
+		"bind": "NONE",
+		"type": "FUNC",
+		"name": "tier0.dll_?V_stristr_fast@@YAPEBDPEBD0@Z",
+		"plt": 6442680720
+	},
+	{
+		"ordinal": 31,
+		"bind": "NONE",
+		"type": "FUNC",
+		"name": "tier0.dll__V_SetExtension",
+		"plt": 6442680728
+	},
+	{
+		"ordinal": 32,
+		"bind": "NONE",
+		"type": "FUNC",
+		"name": "tier0.dll_V_FixSlashes",
+		"plt": 6442680736
+	},
+	{
+		"ordinal": 33,
+		"bind": "NONE",
+		"type": "FUNC",
+		"name": "tier0.dll_Plat_SetDenormalsAreZero",
+		"plt": 6442680744
+	},
+	{
+		"ordinal": 34,
+		"bind": "NONE",
+		"type": "FUNC",
+		"name": "tier0.dll_GetCPUInformation",
+		"plt": 6442680752
+	},
+	{
+		"ordinal": 35,
+		"bind": "NONE",
+		"type": "FUNC",
+		"name": "tier0.dll_V_GetRtSupportFunctions",
+		"plt": 6442680760
+	},
+	{
+		"ordinal": 36,
+		"bind": "NONE",
+		"type": "FUNC",
+		"name": "tier0.dll_V_stricmp_fast",
+		"plt": 6442680768
+	},
+	{
+		"ordinal": 37,
+		"bind": "NONE",
+		"type": "FUNC",
+		"name": "tier0.dll_Plat_GetEnv",
+		"plt": 6442680776
+	},
+	{
+		"ordinal": 38,
+		"bind": "NONE",
+		"type": "FUNC",
+		"name": "tier0.dll_Plat_ExitProcess",
+		"plt": 6442680784
+	},
+	{
+		"ordinal": 39,
+		"bind": "NONE",
+		"type": "FUNC",
+		"name": "tier0.dll_CommandLine",
+		"plt": 6442680792
+	},
+	{
+		"ordinal": 40,
+		"bind": "NONE",
+		"type": "FUNC",
+		"name": "tier0.dll_?LoggingSystem_Log@@YA?AW4LoggingResponse_t@@HW4LoggingSeverity_t@@AEBULeafCodeInfo_t@@PEBDZZ",
+		"plt": 6442680800
+	},
+	{
+		"ordinal": 41,
+		"bind": "NONE",
+		"type": "FUNC",
+		"name": "tier0.dll_LoggingSystem_Log",
+		"plt": 6442680808
+	},
+	{
+		"ordinal": 42,
+		"bind": "NONE",
+		"type": "FUNC",
+		"name": "tier0.dll_g_pMemAlloc",
+		"plt": 6442680816
+	},
+	{
+		"ordinal": 43,
+		"bind": "NONE",
+		"type": "FUNC",
+		"name": "tier0.dll_LoggingSystem_IsChannelEnabled",
+		"plt": 6442680824
+	},
+	{
+		"ordinal": 44,
+		"bind": "NONE",
+		"type": "FUNC",
+		"name": "tier0.dll_Plat_IsInDebugSession",
+		"plt": 6442680832
+	},
+	{
+		"ordinal": 45,
+		"bind": "NONE",
+		"type": "FUNC",
+		"name": "tier0.dll_V_vsnprintfWarnTrunc",
+		"plt": 6442680840
+	},
+	{
+		"ordinal": 46,
+		"bind": "NONE",
+		"type": "FUNC",
+		"name": "tier0.dll_?LockForRead@CThreadSpinRWLock@@QEAAXPEBDH@Z",
+		"plt": 6442680848
+	},
+	{
+		"ordinal": 47,
+		"bind": "NONE",
+		"type": "FUNC",
+		"name": "tier0.dll_?UnlockRead@CThreadSpinRWLock@@QEAAXPEBDH@Z",
+		"plt": 6442680856
+	},
+	{
+		"ordinal": 48,
+		"bind": "NONE",
+		"type": "FUNC",
+		"name": "tier0.dll_V_PrettifyNum",
+		"plt": 6442680864
+	},
+	{
+		"ordinal": 49,
+		"bind": "NONE",
+		"type": "FUNC",
+		"name": "tier0.dll_V_qsort",
+		"plt": 6442680872
+	},
+	{
+		"ordinal": 50,
+		"bind": "NONE",
+		"type": "FUNC",
+		"name": "tier0.dll_CMemAllocSystemInitialize",
+		"plt": 6442680880
+	},
+	{
+		"ordinal": 51,
+		"bind": "NONE",
+		"type": "FUNC",
+		"name": "tier0.dll_V_atofloat32",
+		"plt": 6442680888
+	},
+	{
+		"ordinal": 52,
+		"bind": "NONE",
+		"type": "FUNC",
+		"name": "tier0.dll__V_strnicmp_fast",
+		"plt": 6442680896
+	},
+	{
+		"ordinal": 53,
+		"bind": "NONE",
+		"type": "FUNC",
+		"name": "tier0.dll_V_vsnprintfSize",
+		"plt": 6442680904
+	},
+	{
+		"ordinal": 54,
+		"bind": "NONE",
+		"type": "FUNC",
+		"name": "tier0.dll_?Purge@CBufferString@@QEAAXH@Z",
+		"plt": 6442680912
+	},
+	{
+		"ordinal": 55,
+		"bind": "NONE",
+		"type": "FUNC",
+		"name": "tier0.dll_V_sscanf",
+		"plt": 6442680920
+	},
+	{
+		"ordinal": 56,
+		"bind": "NONE",
+		"type": "FUNC",
+		"name": "tier0.dll_V_atof",
+		"plt": 6442680928
+	},
+	{
+		"ordinal": 1,
+		"bind": "NONE",
+		"type": "FUNC",
+		"name": "vstdlib.dll_RegisterStringToken",
+		"plt": 6442680944
+	}
+]

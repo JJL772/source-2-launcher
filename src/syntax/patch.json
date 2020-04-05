@@ -1,0 +1,17 @@
+[
+	{
+		"desc": "This patch fixes max_players",
+		"lib": "engine2.dll",
+		"version": "1.2",
+		"data": [
+			{
+				"offset": 1234,
+				"bytes": "aa bb cc dd ee ff"
+			},
+			{
+				"offset": 3242,
+				"asm": "int3"
+			}
+		]
+	}
+]

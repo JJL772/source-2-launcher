@@ -1,0 +1,2404 @@
+[
+	{
+		"name": "ICommandCompletionCallback",
+		"bases": [],
+		"vtables": [],
+		"methods": []
+	},
+	{
+		"name": "ConVar_1",
+		"bases": [
+			{
+				"id": "0",
+				"name": "ConCommandBase",
+				"offset": 0
+			},
+			{
+				"id": "1",
+				"name": "IConVar",
+				"offset": 48
+			}
+		],
+		"vtables": [
+			{
+				"id": "0",
+				"addr": 6442702232,
+				"offset": 0
+			}
+		],
+		"methods": [
+			{
+				"name": "virtual_0",
+				"addr": 6442662448,
+				"vtable_offset": 0
+			},
+			{
+				"name": "virtual_8",
+				"addr": 6442662400,
+				"vtable_offset": 8
+			},
+			{
+				"name": "virtual_16",
+				"addr": 6442662416,
+				"vtable_offset": 16
+			},
+			{
+				"name": "virtual_24",
+				"addr": 6442662432,
+				"vtable_offset": 24
+			},
+			{
+				"name": "virtual_32",
+				"addr": 6442660572,
+				"vtable_offset": 32
+			},
+			{
+				"name": "virtual_40",
+				"addr": 6442660288,
+				"vtable_offset": 40
+			},
+			{
+				"name": "virtual_48",
+				"addr": 6442662332,
+				"vtable_offset": 48
+			},
+			{
+				"name": "virtual_56",
+				"addr": 6442660592,
+				"vtable_offset": 56
+			},
+			{
+				"name": "virtual_64",
+				"addr": 6442659132,
+				"vtable_offset": 64
+			}
+		]
+	},
+	{
+		"name": "CTier1AppSystem_class_ISchemaSystem__0_",
+		"bases": [],
+		"vtables": [],
+		"methods": []
+	},
+	{
+		"name": "CConCommandMemberAccessor_class_CSchemaSystem_",
+		"bases": [
+			{
+				"id": "0",
+				"name": "ConCommand",
+				"offset": 0
+			},
+			{
+				"id": "1",
+				"name": "ConCommandBase",
+				"offset": 0
+			},
+			{
+				"id": "2",
+				"name": "ICommandCallback",
+				"offset": 96
+			},
+			{
+				"id": "3",
+				"name": "ICommandCompletionCallback",
+				"offset": 104
+			}
+		],
+		"vtables": [
+			{
+				"id": "0",
+				"addr": 6442708448,
+				"offset": 0
+			}
+		],
+		"methods": [
+			{
+				"name": "virtual_0",
+				"addr": 6442517872,
+				"vtable_offset": 0
+			}
+		]
+	},
+	{
+		"name": "CSchemaType_Atomic_T",
+		"bases": [
+			{
+				"id": "0",
+				"name": "CSchemaType_Atomic",
+				"offset": 0
+			},
+			{
+				"id": "1",
+				"name": "CSchemaType",
+				"offset": 0
+			}
+		],
+		"vtables": [
+			{
+				"id": "0",
+				"addr": 6442708472,
+				"offset": 0
+			}
+		],
+		"methods": [
+			{
+				"name": "virtual_0",
+				"addr": 6442490528,
+				"vtable_offset": 0
+			},
+			{
+				"name": "virtual_8",
+				"addr": 6442489840,
+				"vtable_offset": 8
+			},
+			{
+				"name": "virtual_16",
+				"addr": 6442490688,
+				"vtable_offset": 16
+			},
+			{
+				"name": "virtual_24",
+				"addr": 6442649968,
+				"vtable_offset": 24
+			},
+			{
+				"name": "virtual_32",
+				"addr": 6442490544,
+				"vtable_offset": 32
+			},
+			{
+				"name": "virtual_40",
+				"addr": 6442489568,
+				"vtable_offset": 40
+			},
+			{
+				"name": "virtual_48",
+				"addr": 6442490800,
+				"vtable_offset": 48
+			},
+			{
+				"name": "virtual_56",
+				"addr": 6442490816,
+				"vtable_offset": 56
+			},
+			{
+				"name": "virtual_64",
+				"addr": 6442489616,
+				"vtable_offset": 64
+			},
+			{
+				"name": "virtual_72",
+				"addr": 6442490832,
+				"vtable_offset": 72
+			},
+			{
+				"name": "virtual_80",
+				"addr": 6442490944,
+				"vtable_offset": 80
+			},
+			{
+				"name": "virtual_88",
+				"addr": 6442489760,
+				"vtable_offset": 88
+			}
+		]
+	},
+	{
+		"name": "CFmtStrN_256__0_",
+		"bases": [],
+		"vtables": [
+			{
+				"id": "0",
+				"addr": 6442687896,
+				"offset": 0
+			}
+		],
+		"methods": [
+			{
+				"name": "virtual_0",
+				"addr": 6442488048,
+				"vtable_offset": 0
+			}
+		]
+	},
+	{
+		"name": "type_info",
+		"bases": [],
+		"vtables": [
+			{
+				"id": "0",
+				"addr": 6442703720,
+				"offset": 0
+			}
+		],
+		"methods": [
+			{
+				"name": "virtual_0",
+				"addr": 6442675856,
+				"vtable_offset": 0
+			}
+		]
+	},
+	{
+		"name": "CSchemaType_Builtin",
+		"bases": [
+			{
+				"id": "0",
+				"name": "CSchemaType",
+				"offset": 0
+			}
+		],
+		"vtables": [
+			{
+				"id": "0",
+				"addr": 6442709712,
+				"offset": 0
+			}
+		],
+		"methods": [
+			{
+				"name": "virtual_0",
+				"addr": 6442489584,
+				"vtable_offset": 0
+			},
+			{
+				"name": "virtual_8",
+				"addr": 6442489536,
+				"vtable_offset": 8
+			},
+			{
+				"name": "virtual_16",
+				"addr": 6442490448,
+				"vtable_offset": 16
+			},
+			{
+				"name": "virtual_24",
+				"addr": 6442649968,
+				"vtable_offset": 24
+			},
+			{
+				"name": "virtual_32",
+				"addr": 6442490464,
+				"vtable_offset": 32
+			},
+			{
+				"name": "virtual_40",
+				"addr": 6442489568,
+				"vtable_offset": 40
+			},
+			{
+				"name": "virtual_48",
+				"addr": 6442489584,
+				"vtable_offset": 48
+			},
+			{
+				"name": "virtual_56",
+				"addr": 6442489600,
+				"vtable_offset": 56
+			},
+			{
+				"name": "virtual_64",
+				"addr": 6442489616,
+				"vtable_offset": 64
+			},
+			{
+				"name": "virtual_72",
+				"addr": 6442489632,
+				"vtable_offset": 72
+			},
+			{
+				"name": "virtual_80",
+				"addr": 6442489744,
+				"vtable_offset": 80
+			},
+			{
+				"name": "virtual_88",
+				"addr": 6442489760,
+				"vtable_offset": 88
+			}
+		]
+	},
+	{
+		"name": "CSchemaSystem",
+		"bases": [
+			{
+				"id": "0",
+				"name": "CTier2AppSystem_class_ISchemaSystem__0_",
+				"offset": 0
+			},
+			{
+				"id": "1",
+				"name": "CTier1AppSystem_class_ISchemaSystem__0_",
+				"offset": 0
+			},
+			{
+				"id": "2",
+				"name": "CTier0AppSystem_class_ISchemaSystem_",
+				"offset": 0
+			},
+			{
+				"id": "3",
+				"name": "CBaseAppSystem_class_ISchemaSystem_",
+				"offset": 0
+			},
+			{
+				"id": "4",
+				"name": "ISchemaSystem",
+				"offset": 0
+			},
+			{
+				"id": "5",
+				"name": "IAppSystem",
+				"offset": 0
+			}
+		],
+		"vtables": [
+			{
+				"id": "0",
+				"addr": 6442708680,
+				"offset": 0
+			}
+		],
+		"methods": [
+			{
+				"name": "virtual_0",
+				"addr": 6442493360,
+				"vtable_offset": 0
+			},
+			{
+				"name": "virtual_8",
+				"addr": 6442517888,
+				"vtable_offset": 8
+			},
+			{
+				"name": "virtual_16",
+				"addr": 6442489584,
+				"vtable_offset": 16
+			},
+			{
+				"name": "virtual_24",
+				"addr": 6442493440,
+				"vtable_offset": 24
+			},
+			{
+				"name": "virtual_32",
+				"addr": 6442493504,
+				"vtable_offset": 32
+			},
+			{
+				"name": "virtual_40",
+				"addr": 6442463248,
+				"vtable_offset": 40
+			},
+			{
+				"name": "virtual_48",
+				"addr": 6442493344,
+				"vtable_offset": 48
+			},
+			{
+				"name": "virtual_56",
+				"addr": 6442490400,
+				"vtable_offset": 56
+			},
+			{
+				"name": "virtual_64",
+				"addr": 6442517952,
+				"vtable_offset": 64
+			},
+			{
+				"name": "virtual_72",
+				"addr": 6442490416,
+				"vtable_offset": 72
+			},
+			{
+				"name": "virtual_80",
+				"addr": 6442490400,
+				"vtable_offset": 80
+			},
+			{
+				"name": "virtual_88",
+				"addr": 6442499888,
+				"vtable_offset": 88
+			},
+			{
+				"name": "virtual_96",
+				"addr": 6442499984,
+				"vtable_offset": 96
+			},
+			{
+				"name": "virtual_104",
+				"addr": 6442499904,
+				"vtable_offset": 104
+			},
+			{
+				"name": "virtual_112",
+				"addr": 6442500256,
+				"vtable_offset": 112
+			},
+			{
+				"name": "virtual_120",
+				"addr": 6442500288,
+				"vtable_offset": 120
+			},
+			{
+				"name": "virtual_128",
+				"addr": 6442500448,
+				"vtable_offset": 128
+			},
+			{
+				"name": "virtual_136",
+				"addr": 6442500592,
+				"vtable_offset": 136
+			},
+			{
+				"name": "virtual_144",
+				"addr": 6442500752,
+				"vtable_offset": 144
+			},
+			{
+				"name": "virtual_152",
+				"addr": 6442500896,
+				"vtable_offset": 152
+			},
+			{
+				"name": "virtual_160",
+				"addr": 6442498688,
+				"vtable_offset": 160
+			},
+			{
+				"name": "virtual_168",
+				"addr": 6442499264,
+				"vtable_offset": 168
+			},
+			{
+				"name": "virtual_176",
+				"addr": 6442499280,
+				"vtable_offset": 176
+			},
+			{
+				"name": "virtual_184",
+				"addr": 6442499264,
+				"vtable_offset": 184
+			},
+			{
+				"name": "virtual_192",
+				"addr": 6442499280,
+				"vtable_offset": 192
+			},
+			{
+				"name": "virtual_200",
+				"addr": 6442491408,
+				"vtable_offset": 200
+			},
+			{
+				"name": "virtual_208",
+				"addr": 6442461760,
+				"vtable_offset": 208
+			},
+			{
+				"name": "virtual_216",
+				"addr": 6442510768,
+				"vtable_offset": 216
+			},
+			{
+				"name": "virtual_224",
+				"addr": 6442512656,
+				"vtable_offset": 224
+			},
+			{
+				"name": "virtual_232",
+				"addr": 6442510752,
+				"vtable_offset": 232
+			},
+			{
+				"name": "virtual_240",
+				"addr": 6442485600,
+				"vtable_offset": 240
+			},
+			{
+				"name": "virtual_248",
+				"addr": 6442486288,
+				"vtable_offset": 248
+			},
+			{
+				"name": "virtual_256",
+				"addr": 6442498272,
+				"vtable_offset": 256
+			},
+			{
+				"name": "virtual_264",
+				"addr": 6442498352,
+				"vtable_offset": 264
+			},
+			{
+				"name": "virtual_272",
+				"addr": 6442498464,
+				"vtable_offset": 272
+			},
+			{
+				"name": "virtual_280",
+				"addr": 6442498640,
+				"vtable_offset": 280
+			},
+			{
+				"name": "virtual_288",
+				"addr": 6442472448,
+				"vtable_offset": 288
+			},
+			{
+				"name": "virtual_296",
+				"addr": 6442492800,
+				"vtable_offset": 296
+			}
+		]
+	},
+	{
+		"name": "CBaseAppSystem_class_ISchemaSystem_",
+		"bases": [],
+		"vtables": [],
+		"methods": []
+	},
+	{
+		"name": "CSchemaType_Atomic_TT",
+		"bases": [
+			{
+				"id": "0",
+				"name": "CSchemaType_Atomic_T",
+				"offset": 0
+			},
+			{
+				"id": "1",
+				"name": "CSchemaType_Atomic",
+				"offset": 0
+			},
+			{
+				"id": "2",
+				"name": "CSchemaType",
+				"offset": 0
+			}
+		],
+		"vtables": [
+			{
+				"id": "0",
+				"addr": 6442708576,
+				"offset": 0
+			}
+		],
+		"methods": [
+			{
+				"name": "virtual_0",
+				"addr": 6442490528,
+				"vtable_offset": 0
+			},
+			{
+				"name": "virtual_8",
+				"addr": 6442490160,
+				"vtable_offset": 8
+			},
+			{
+				"name": "virtual_16",
+				"addr": 6442491024,
+				"vtable_offset": 16
+			},
+			{
+				"name": "virtual_24",
+				"addr": 6442649968,
+				"vtable_offset": 24
+			},
+			{
+				"name": "virtual_32",
+				"addr": 6442490544,
+				"vtable_offset": 32
+			},
+			{
+				"name": "virtual_40",
+				"addr": 6442489568,
+				"vtable_offset": 40
+			},
+			{
+				"name": "virtual_48",
+				"addr": 6442490800,
+				"vtable_offset": 48
+			},
+			{
+				"name": "virtual_56",
+				"addr": 6442490816,
+				"vtable_offset": 56
+			},
+			{
+				"name": "virtual_64",
+				"addr": 6442489616,
+				"vtable_offset": 64
+			},
+			{
+				"name": "virtual_72",
+				"addr": 6442490832,
+				"vtable_offset": 72
+			},
+			{
+				"name": "virtual_80",
+				"addr": 6442491088,
+				"vtable_offset": 80
+			},
+			{
+				"name": "virtual_88",
+				"addr": 6442489760,
+				"vtable_offset": 88
+			}
+		]
+	},
+	{
+		"name": "CSchemaType_NoschemaType",
+		"bases": [
+			{
+				"id": "0",
+				"name": "CSchemaType",
+				"offset": 0
+			}
+		],
+		"vtables": [
+			{
+				"id": "0",
+				"addr": 6442709008,
+				"offset": 0
+			}
+		],
+		"methods": [
+			{
+				"name": "virtual_0",
+				"addr": 6442490496,
+				"vtable_offset": 0
+			},
+			{
+				"name": "virtual_8",
+				"addr": 6442489536,
+				"vtable_offset": 8
+			},
+			{
+				"name": "virtual_16",
+				"addr": 6442490416,
+				"vtable_offset": 16
+			},
+			{
+				"name": "virtual_24",
+				"addr": 6442649968,
+				"vtable_offset": 24
+			},
+			{
+				"name": "virtual_32",
+				"addr": 6442490512,
+				"vtable_offset": 32
+			},
+			{
+				"name": "virtual_40",
+				"addr": 6442489568,
+				"vtable_offset": 40
+			},
+			{
+				"name": "virtual_48",
+				"addr": 6442489584,
+				"vtable_offset": 48
+			},
+			{
+				"name": "virtual_56",
+				"addr": 6442489600,
+				"vtable_offset": 56
+			},
+			{
+				"name": "virtual_64",
+				"addr": 6442489616,
+				"vtable_offset": 64
+			},
+			{
+				"name": "virtual_72",
+				"addr": 6442489632,
+				"vtable_offset": 72
+			},
+			{
+				"name": "virtual_80",
+				"addr": 6442489744,
+				"vtable_offset": 80
+			},
+			{
+				"name": "virtual_88",
+				"addr": 6442489760,
+				"vtable_offset": 88
+			}
+		]
+	},
+	{
+		"name": "CSchemaType",
+		"bases": [],
+		"vtables": [
+			{
+				"id": "0",
+				"addr": 6442709608,
+				"offset": 0
+			}
+		],
+		"methods": [
+			{
+				"name": "virtual_0",
+				"addr": 6442674528,
+				"vtable_offset": 0
+			},
+			{
+				"name": "virtual_8",
+				"addr": 6442489536,
+				"vtable_offset": 8
+			},
+			{
+				"name": "virtual_16",
+				"addr": 6442489552,
+				"vtable_offset": 16
+			},
+			{
+				"name": "virtual_24",
+				"addr": 6442649968,
+				"vtable_offset": 24
+			},
+			{
+				"name": "virtual_32",
+				"addr": 6442674528,
+				"vtable_offset": 32
+			},
+			{
+				"name": "virtual_40",
+				"addr": 6442489568,
+				"vtable_offset": 40
+			},
+			{
+				"name": "virtual_48",
+				"addr": 6442489584,
+				"vtable_offset": 48
+			},
+			{
+				"name": "virtual_56",
+				"addr": 6442489600,
+				"vtable_offset": 56
+			},
+			{
+				"name": "virtual_64",
+				"addr": 6442489616,
+				"vtable_offset": 64
+			},
+			{
+				"name": "virtual_72",
+				"addr": 6442489632,
+				"vtable_offset": 72
+			},
+			{
+				"name": "virtual_80",
+				"addr": 6442489744,
+				"vtable_offset": 80
+			},
+			{
+				"name": "virtual_88",
+				"addr": 6442489760,
+				"vtable_offset": 88
+			}
+		]
+	},
+	{
+		"name": "ICommandCallback",
+		"bases": [],
+		"vtables": [],
+		"methods": []
+	},
+	{
+		"name": "ISchemaSystemTypeScope",
+		"bases": [],
+		"vtables": [],
+		"methods": []
+	},
+	{
+		"name": "CSchemaType_Atomic_CollectionOfT",
+		"bases": [
+			{
+				"id": "0",
+				"name": "CSchemaType_Atomic_T",
+				"offset": 0
+			},
+			{
+				"id": "1",
+				"name": "CSchemaType_Atomic",
+				"offset": 0
+			},
+			{
+				"id": "2",
+				"name": "CSchemaType",
+				"offset": 0
+			}
+		],
+		"vtables": [
+			{
+				"id": "0",
+				"addr": 6442709816,
+				"offset": 0
+			}
+		],
+		"methods": [
+			{
+				"name": "virtual_0",
+				"addr": 6442490528,
+				"vtable_offset": 0
+			},
+			{
+				"name": "virtual_8",
+				"addr": 6442490400,
+				"vtable_offset": 8
+			},
+			{
+				"name": "virtual_16",
+				"addr": 6442490976,
+				"vtable_offset": 16
+			},
+			{
+				"name": "virtual_24",
+				"addr": 6442649968,
+				"vtable_offset": 24
+			},
+			{
+				"name": "virtual_32",
+				"addr": 6442490544,
+				"vtable_offset": 32
+			},
+			{
+				"name": "virtual_40",
+				"addr": 6442489568,
+				"vtable_offset": 40
+			},
+			{
+				"name": "virtual_48",
+				"addr": 6442490800,
+				"vtable_offset": 48
+			},
+			{
+				"name": "virtual_56",
+				"addr": 6442490816,
+				"vtable_offset": 56
+			},
+			{
+				"name": "virtual_64",
+				"addr": 6442489616,
+				"vtable_offset": 64
+			},
+			{
+				"name": "virtual_72",
+				"addr": 6442490832,
+				"vtable_offset": 72
+			},
+			{
+				"name": "virtual_80",
+				"addr": 6442490944,
+				"vtable_offset": 80
+			},
+			{
+				"name": "virtual_88",
+				"addr": 6442489760,
+				"vtable_offset": 88
+			}
+		]
+	},
+	{
+		"name": "IConVar",
+		"bases": [],
+		"vtables": [],
+		"methods": []
+	},
+	{
+		"name": "CConCommandMemberAccessor_class_CSchemaSystem__2",
+		"bases": [
+			{
+				"id": "0",
+				"name": "ConCommand",
+				"offset": 0
+			},
+			{
+				"id": "1",
+				"name": "ConCommandBase",
+				"offset": 0
+			},
+			{
+				"id": "2",
+				"name": "ICommandCallback",
+				"offset": 96
+			},
+			{
+				"id": "3",
+				"name": "ICommandCompletionCallback",
+				"offset": 104
+			}
+		],
+		"vtables": [
+			{
+				"id": "0",
+				"addr": 6442710024,
+				"offset": 0
+			}
+		],
+		"methods": [
+			{
+				"name": "virtual_0",
+				"addr": 6442518016,
+				"vtable_offset": 0
+			},
+			{
+				"name": "virtual_8",
+				"addr": 6442490416,
+				"vtable_offset": 8
+			},
+			{
+				"name": "virtual_16",
+				"addr": 6442489552,
+				"vtable_offset": 16
+			},
+			{
+				"name": "virtual_24",
+				"addr": 6442662304,
+				"vtable_offset": 24
+			},
+			{
+				"name": "virtual_32",
+				"addr": 6442659104,
+				"vtable_offset": 32
+			},
+			{
+				"name": "virtual_40",
+				"addr": 6442662384,
+				"vtable_offset": 40
+			},
+			{
+				"name": "virtual_48",
+				"addr": 6442490800,
+				"vtable_offset": 48
+			},
+			{
+				"name": "virtual_56",
+				"addr": 6442489872,
+				"vtable_offset": 56
+			},
+			{
+				"name": "virtual_64",
+				"addr": 6442490192,
+				"vtable_offset": 64
+			},
+			{
+				"name": "virtual_72",
+				"addr": 6442662352,
+				"vtable_offset": 72
+			},
+			{
+				"name": "virtual_80",
+				"addr": 6442660320,
+				"vtable_offset": 80
+			},
+			{
+				"name": "virtual_88",
+				"addr": 6442659904,
+				"vtable_offset": 88
+			},
+			{
+				"name": "virtual_96",
+				"addr": 6442660752,
+				"vtable_offset": 96
+			},
+			{
+				"name": "virtual_104",
+				"addr": 6442659152,
+				"vtable_offset": 104
+			},
+			{
+				"name": "virtual_112",
+				"addr": 6442659232,
+				"vtable_offset": 112
+			},
+			{
+				"name": "virtual_120",
+				"addr": 6442660096,
+				"vtable_offset": 120
+			}
+		]
+	},
+	{
+		"name": "CConCommandMemberAccessor_class_CSchemaSystem__1",
+		"bases": [
+			{
+				"id": "0",
+				"name": "ConCommand",
+				"offset": 0
+			},
+			{
+				"id": "1",
+				"name": "ConCommandBase",
+				"offset": 0
+			},
+			{
+				"id": "2",
+				"name": "ICommandCallback",
+				"offset": 96
+			},
+			{
+				"id": "3",
+				"name": "ICommandCompletionCallback",
+				"offset": 104
+			}
+		],
+		"vtables": [
+			{
+				"id": "0",
+				"addr": 6442708992,
+				"offset": 0
+			}
+		],
+		"methods": [
+			{
+				"name": "virtual_0",
+				"addr": 6442517840,
+				"vtable_offset": 0
+			}
+		]
+	},
+	{
+		"name": "ConCommandBase",
+		"bases": [],
+		"vtables": [
+			{
+				"id": "0",
+				"addr": 6442701800,
+				"offset": 0
+			}
+		],
+		"methods": [
+			{
+				"name": "virtual_0",
+				"addr": 6442658928,
+				"vtable_offset": 0
+			},
+			{
+				"name": "virtual_8",
+				"addr": 6442490416,
+				"vtable_offset": 8
+			},
+			{
+				"name": "virtual_16",
+				"addr": 6442489552,
+				"vtable_offset": 16
+			},
+			{
+				"name": "virtual_24",
+				"addr": 6442662304,
+				"vtable_offset": 24
+			},
+			{
+				"name": "virtual_32",
+				"addr": 6442659104,
+				"vtable_offset": 32
+			},
+			{
+				"name": "virtual_40",
+				"addr": 6442662384,
+				"vtable_offset": 40
+			},
+			{
+				"name": "virtual_48",
+				"addr": 6442490800,
+				"vtable_offset": 48
+			},
+			{
+				"name": "virtual_56",
+				"addr": 6442489872,
+				"vtable_offset": 56
+			},
+			{
+				"name": "virtual_64",
+				"addr": 6442490192,
+				"vtable_offset": 64
+			},
+			{
+				"name": "virtual_72",
+				"addr": 6442662352,
+				"vtable_offset": 72
+			},
+			{
+				"name": "virtual_80",
+				"addr": 6442660320,
+				"vtable_offset": 80
+			},
+			{
+				"name": "virtual_88",
+				"addr": 6442660000,
+				"vtable_offset": 88
+			},
+			{
+				"name": "virtual_96",
+				"addr": 6442660752,
+				"vtable_offset": 96
+			}
+		]
+	},
+	{
+		"name": "CSchemaType_Atomic_I",
+		"bases": [
+			{
+				"id": "0",
+				"name": "CSchemaType_Atomic",
+				"offset": 0
+			},
+			{
+				"id": "1",
+				"name": "CSchemaType",
+				"offset": 0
+			}
+		],
+		"vtables": [
+			{
+				"id": "0",
+				"addr": 6442709504,
+				"offset": 0
+			}
+		],
+		"methods": [
+			{
+				"name": "virtual_0",
+				"addr": 6442490528,
+				"vtable_offset": 0
+			},
+			{
+				"name": "virtual_8",
+				"addr": 6442490528,
+				"vtable_offset": 8
+			},
+			{
+				"name": "virtual_16",
+				"addr": 6442490608,
+				"vtable_offset": 16
+			},
+			{
+				"name": "virtual_24",
+				"addr": 6442649968,
+				"vtable_offset": 24
+			},
+			{
+				"name": "virtual_32",
+				"addr": 6442490544,
+				"vtable_offset": 32
+			},
+			{
+				"name": "virtual_40",
+				"addr": 6442489568,
+				"vtable_offset": 40
+			},
+			{
+				"name": "virtual_48",
+				"addr": 6442489584,
+				"vtable_offset": 48
+			},
+			{
+				"name": "virtual_56",
+				"addr": 6442489600,
+				"vtable_offset": 56
+			},
+			{
+				"name": "virtual_64",
+				"addr": 6442489616,
+				"vtable_offset": 64
+			},
+			{
+				"name": "virtual_72",
+				"addr": 6442489632,
+				"vtable_offset": 72
+			},
+			{
+				"name": "virtual_80",
+				"addr": 6442489744,
+				"vtable_offset": 80
+			},
+			{
+				"name": "virtual_88",
+				"addr": 6442489760,
+				"vtable_offset": 88
+			}
+		]
+	},
+	{
+		"name": "CTier2AppSystem_class_ISchemaSystem__0_",
+		"bases": [],
+		"vtables": [],
+		"methods": []
+	},
+	{
+		"name": "CSchemaType_DeclaredEnum",
+		"bases": [
+			{
+				"id": "0",
+				"name": "CSchemaType",
+				"offset": 0
+			}
+		],
+		"vtables": [
+			{
+				"id": "0",
+				"addr": 6442708240,
+				"offset": 0
+			}
+		],
+		"methods": [
+			{
+				"name": "virtual_0",
+				"addr": 6442491328,
+				"vtable_offset": 0
+			},
+			{
+				"name": "virtual_8",
+				"addr": 6442489536,
+				"vtable_offset": 8
+			},
+			{
+				"name": "virtual_16",
+				"addr": 6442491344,
+				"vtable_offset": 16
+			},
+			{
+				"name": "virtual_24",
+				"addr": 6442649968,
+				"vtable_offset": 24
+			},
+			{
+				"name": "virtual_32",
+				"addr": 6442649360,
+				"vtable_offset": 32
+			},
+			{
+				"name": "virtual_40",
+				"addr": 6442489568,
+				"vtable_offset": 40
+			},
+			{
+				"name": "virtual_48",
+				"addr": 6442489584,
+				"vtable_offset": 48
+			},
+			{
+				"name": "virtual_56",
+				"addr": 6442489600,
+				"vtable_offset": 56
+			},
+			{
+				"name": "virtual_64",
+				"addr": 6442489616,
+				"vtable_offset": 64
+			},
+			{
+				"name": "virtual_72",
+				"addr": 6442489632,
+				"vtable_offset": 72
+			},
+			{
+				"name": "virtual_80",
+				"addr": 6442491296,
+				"vtable_offset": 80
+			},
+			{
+				"name": "virtual_88",
+				"addr": 6442489760,
+				"vtable_offset": 88
+			}
+		]
+	},
+	{
+		"name": "CSchemaType_FixedArray",
+		"bases": [
+			{
+				"id": "0",
+				"name": "CSchemaType",
+				"offset": 0
+			}
+		],
+		"vtables": [
+			{
+				"id": "0",
+				"addr": 6442710160,
+				"offset": 0
+			}
+		],
+		"methods": [
+			{
+				"name": "virtual_0",
+				"addr": 6442490160,
+				"vtable_offset": 0
+			},
+			{
+				"name": "virtual_8",
+				"addr": 6442489536,
+				"vtable_offset": 8
+			},
+			{
+				"name": "virtual_16",
+				"addr": 6442490176,
+				"vtable_offset": 16
+			},
+			{
+				"name": "virtual_24",
+				"addr": 6442649968,
+				"vtable_offset": 24
+			},
+			{
+				"name": "virtual_32",
+				"addr": 6442490224,
+				"vtable_offset": 32
+			},
+			{
+				"name": "virtual_40",
+				"addr": 6442489568,
+				"vtable_offset": 40
+			},
+			{
+				"name": "virtual_48",
+				"addr": 6442490192,
+				"vtable_offset": 48
+			},
+			{
+				"name": "virtual_56",
+				"addr": 6442490208,
+				"vtable_offset": 56
+			},
+			{
+				"name": "virtual_64",
+				"addr": 6442489616,
+				"vtable_offset": 64
+			},
+			{
+				"name": "virtual_72",
+				"addr": 6442490256,
+				"vtable_offset": 72
+			},
+			{
+				"name": "virtual_80",
+				"addr": 6442490368,
+				"vtable_offset": 80
+			},
+			{
+				"name": "virtual_88",
+				"addr": 6442489760,
+				"vtable_offset": 88
+			}
+		]
+	},
+	{
+		"name": "CPlaceholderConVar",
+		"bases": [
+			{
+				"id": "0",
+				"name": "ConVar_1",
+				"offset": 0
+			},
+			{
+				"id": "1",
+				"name": "ConCommandBase",
+				"offset": 0
+			},
+			{
+				"id": "2",
+				"name": "IConVar",
+				"offset": 48
+			}
+		],
+		"vtables": [
+			{
+				"id": "0",
+				"addr": 6442702312,
+				"offset": 0
+			}
+		],
+		"methods": [
+			{
+				"name": "virtual_0",
+				"addr": 6442658736,
+				"vtable_offset": 0
+			},
+			{
+				"name": "virtual_8",
+				"addr": 6442489552,
+				"vtable_offset": 8
+			},
+			{
+				"name": "virtual_16",
+				"addr": 6442489552,
+				"vtable_offset": 16
+			},
+			{
+				"name": "virtual_24",
+				"addr": 6442489552,
+				"vtable_offset": 24
+			},
+			{
+				"name": "virtual_32",
+				"addr": 6442659120,
+				"vtable_offset": 32
+			},
+			{
+				"name": "virtual_40",
+				"addr": 6442662384,
+				"vtable_offset": 40
+			},
+			{
+				"name": "virtual_48",
+				"addr": 6442660480,
+				"vtable_offset": 48
+			},
+			{
+				"name": "virtual_56",
+				"addr": 6442489872,
+				"vtable_offset": 56
+			},
+			{
+				"name": "virtual_64",
+				"addr": 6442660512,
+				"vtable_offset": 64
+			},
+			{
+				"name": "virtual_72",
+				"addr": 6442662368,
+				"vtable_offset": 72
+			},
+			{
+				"name": "virtual_80",
+				"addr": 6442660320,
+				"vtable_offset": 80
+			},
+			{
+				"name": "virtual_88",
+				"addr": 6442660000,
+				"vtable_offset": 88
+			},
+			{
+				"name": "virtual_96",
+				"addr": 6442660752,
+				"vtable_offset": 96
+			},
+			{
+				"name": "virtual_104",
+				"addr": 6442660496,
+				"vtable_offset": 104
+			},
+			{
+				"name": "virtual_112",
+				"addr": 6442660528,
+				"vtable_offset": 112
+			},
+			{
+				"name": "virtual_120",
+				"addr": 6442660304,
+				"vtable_offset": 120
+			},
+			{
+				"name": "virtual_128",
+				"addr": 6442661904,
+				"vtable_offset": 128
+			},
+			{
+				"name": "virtual_136",
+				"addr": 6442661424,
+				"vtable_offset": 136
+			},
+			{
+				"name": "virtual_144",
+				"addr": 6442661648,
+				"vtable_offset": 144
+			},
+			{
+				"name": "virtual_152",
+				"addr": 6442661360,
+				"vtable_offset": 152
+			},
+			{
+				"name": "virtual_160",
+				"addr": 6442659536,
+				"vtable_offset": 160
+			},
+			{
+				"name": "virtual_168",
+				"addr": 6442659248,
+				"vtable_offset": 168
+			}
+		]
+	},
+	{
+		"name": "CSchemaType_Ptr",
+		"bases": [
+			{
+				"id": "0",
+				"name": "CSchemaType",
+				"offset": 0
+			}
+		],
+		"vtables": [
+			{
+				"id": "0",
+				"addr": 6442710264,
+				"offset": 0
+			}
+		],
+		"methods": [
+			{
+				"name": "virtual_0",
+				"addr": 6442489840,
+				"vtable_offset": 0
+			},
+			{
+				"name": "virtual_8",
+				"addr": 6442489536,
+				"vtable_offset": 8
+			},
+			{
+				"name": "virtual_16",
+				"addr": 6442489856,
+				"vtable_offset": 16
+			},
+			{
+				"name": "virtual_24",
+				"addr": 6442649968,
+				"vtable_offset": 24
+			},
+			{
+				"name": "virtual_32",
+				"addr": 6442489904,
+				"vtable_offset": 32
+			},
+			{
+				"name": "virtual_40",
+				"addr": 6442489568,
+				"vtable_offset": 40
+			},
+			{
+				"name": "virtual_48",
+				"addr": 6442489872,
+				"vtable_offset": 48
+			},
+			{
+				"name": "virtual_56",
+				"addr": 6442489888,
+				"vtable_offset": 56
+			},
+			{
+				"name": "virtual_64",
+				"addr": 6442489920,
+				"vtable_offset": 64
+			},
+			{
+				"name": "virtual_72",
+				"addr": 6442490048,
+				"vtable_offset": 72
+			},
+			{
+				"name": "virtual_80",
+				"addr": 6442490016,
+				"vtable_offset": 80
+			},
+			{
+				"name": "virtual_88",
+				"addr": 6442489760,
+				"vtable_offset": 88
+			}
+		]
+	},
+	{
+		"name": "CSchemaSystemTypeScope",
+		"bases": [
+			{
+				"id": "0",
+				"name": "ISchemaSystemTypeScope",
+				"offset": 0
+			}
+		],
+		"vtables": [
+			{
+				"id": "0",
+				"addr": 6442709112,
+				"offset": 0
+			}
+		],
+		"methods": [
+			{
+				"name": "virtual_0",
+				"addr": 6442496992,
+				"vtable_offset": 0
+			},
+			{
+				"name": "virtual_8",
+				"addr": 6442497584,
+				"vtable_offset": 8
+			},
+			{
+				"name": "virtual_16",
+				"addr": 6442510720,
+				"vtable_offset": 16
+			},
+			{
+				"name": "virtual_24",
+				"addr": 6442510736,
+				"vtable_offset": 24
+			},
+			{
+				"name": "virtual_32",
+				"addr": 6442512160,
+				"vtable_offset": 32
+			},
+			{
+				"name": "virtual_40",
+				"addr": 6442503152,
+				"vtable_offset": 40
+			},
+			{
+				"name": "virtual_48",
+				"addr": 6442503600,
+				"vtable_offset": 48
+			},
+			{
+				"name": "virtual_56",
+				"addr": 6442504512,
+				"vtable_offset": 56
+			},
+			{
+				"name": "virtual_64",
+				"addr": 6442505056,
+				"vtable_offset": 64
+			},
+			{
+				"name": "virtual_72",
+				"addr": 6442505536,
+				"vtable_offset": 72
+			},
+			{
+				"name": "virtual_80",
+				"addr": 6442506096,
+				"vtable_offset": 80
+			},
+			{
+				"name": "virtual_88",
+				"addr": 6442506624,
+				"vtable_offset": 88
+			},
+			{
+				"name": "virtual_96",
+				"addr": 6442507152,
+				"vtable_offset": 96
+			},
+			{
+				"name": "virtual_104",
+				"addr": 6442510208,
+				"vtable_offset": 104
+			},
+			{
+				"name": "virtual_112",
+				"addr": 6442503872,
+				"vtable_offset": 112
+			},
+			{
+				"name": "virtual_120",
+				"addr": 6442504224,
+				"vtable_offset": 120
+			},
+			{
+				"name": "virtual_128",
+				"addr": 6442504480,
+				"vtable_offset": 128
+			},
+			{
+				"name": "virtual_136",
+				"addr": 6442504864,
+				"vtable_offset": 136
+			},
+			{
+				"name": "virtual_144",
+				"addr": 6442504992,
+				"vtable_offset": 144
+			},
+			{
+				"name": "virtual_152",
+				"addr": 6442505472,
+				"vtable_offset": 152
+			},
+			{
+				"name": "virtual_160",
+				"addr": 6442506016,
+				"vtable_offset": 160
+			},
+			{
+				"name": "virtual_168",
+				"addr": 6442506560,
+				"vtable_offset": 168
+			},
+			{
+				"name": "virtual_176",
+				"addr": 6442507008,
+				"vtable_offset": 176
+			},
+			{
+				"name": "virtual_184",
+				"addr": 6442507824,
+				"vtable_offset": 184
+			},
+			{
+				"name": "virtual_192",
+				"addr": 6442497968,
+				"vtable_offset": 192
+			},
+			{
+				"name": "virtual_200",
+				"addr": 6442497856,
+				"vtable_offset": 200
+			},
+			{
+				"name": "virtual_208",
+				"addr": 6442498176,
+				"vtable_offset": 208
+			},
+			{
+				"name": "virtual_216",
+				"addr": 6442498064,
+				"vtable_offset": 216
+			},
+			{
+				"name": "virtual_224",
+				"addr": 6442502960,
+				"vtable_offset": 224
+			},
+			{
+				"name": "virtual_232",
+				"addr": 6442502976,
+				"vtable_offset": 232
+			},
+			{
+				"name": "virtual_240",
+				"addr": 6442502992,
+				"vtable_offset": 240
+			},
+			{
+				"name": "virtual_248",
+				"addr": 6442503072,
+				"vtable_offset": 248
+			},
+			{
+				"name": "virtual_256",
+				"addr": 6442511536,
+				"vtable_offset": 256
+			},
+			{
+				"name": "virtual_264",
+				"addr": 6442511776,
+				"vtable_offset": 264
+			},
+			{
+				"name": "virtual_272",
+				"addr": 6442511968,
+				"vtable_offset": 272
+			}
+		]
+	},
+	{
+		"name": "CPostConnectCallback",
+		"bases": [],
+		"vtables": [
+			{
+				"id": "0",
+				"addr": 6442687624,
+				"offset": 0
+			}
+		],
+		"methods": [
+			{
+				"name": "virtual_0",
+				"addr": 6442674528,
+				"vtable_offset": 0
+			}
+		]
+	},
+	{
+		"name": "CSchemaType_Bitfield",
+		"bases": [
+			{
+				"id": "0",
+				"name": "CSchemaType",
+				"offset": 0
+			}
+		],
+		"vtables": [
+			{
+				"id": "0",
+				"addr": 6442708344,
+				"offset": 0
+			}
+		],
+		"methods": [
+			{
+				"name": "virtual_0",
+				"addr": 6442490400,
+				"vtable_offset": 0
+			},
+			{
+				"name": "virtual_8",
+				"addr": 6442489536,
+				"vtable_offset": 8
+			},
+			{
+				"name": "virtual_16",
+				"addr": 6442490416,
+				"vtable_offset": 16
+			},
+			{
+				"name": "virtual_24",
+				"addr": 6442649968,
+				"vtable_offset": 24
+			},
+			{
+				"name": "virtual_32",
+				"addr": 6442490432,
+				"vtable_offset": 32
+			},
+			{
+				"name": "virtual_40",
+				"addr": 6442489568,
+				"vtable_offset": 40
+			},
+			{
+				"name": "virtual_48",
+				"addr": 6442489584,
+				"vtable_offset": 48
+			},
+			{
+				"name": "virtual_56",
+				"addr": 6442489600,
+				"vtable_offset": 56
+			},
+			{
+				"name": "virtual_64",
+				"addr": 6442489616,
+				"vtable_offset": 64
+			},
+			{
+				"name": "virtual_72",
+				"addr": 6442489632,
+				"vtable_offset": 72
+			},
+			{
+				"name": "virtual_80",
+				"addr": 6442489744,
+				"vtable_offset": 80
+			},
+			{
+				"name": "virtual_88",
+				"addr": 6442489760,
+				"vtable_offset": 88
+			}
+		]
+	},
+	{
+		"name": "CSchemaType_Atomic",
+		"bases": [
+			{
+				"id": "0",
+				"name": "CSchemaType",
+				"offset": 0
+			}
+		],
+		"vtables": [
+			{
+				"id": "0",
+				"addr": 6442709400,
+				"offset": 0
+			}
+		],
+		"methods": [
+			{
+				"name": "virtual_0",
+				"addr": 6442490528,
+				"vtable_offset": 0
+			},
+			{
+				"name": "virtual_8",
+				"addr": 6442489584,
+				"vtable_offset": 8
+			},
+			{
+				"name": "virtual_16",
+				"addr": 6442490608,
+				"vtable_offset": 16
+			},
+			{
+				"name": "virtual_24",
+				"addr": 6442649968,
+				"vtable_offset": 24
+			},
+			{
+				"name": "virtual_32",
+				"addr": 6442490544,
+				"vtable_offset": 32
+			},
+			{
+				"name": "virtual_40",
+				"addr": 6442489568,
+				"vtable_offset": 40
+			},
+			{
+				"name": "virtual_48",
+				"addr": 6442489584,
+				"vtable_offset": 48
+			},
+			{
+				"name": "virtual_56",
+				"addr": 6442489600,
+				"vtable_offset": 56
+			},
+			{
+				"name": "virtual_64",
+				"addr": 6442489616,
+				"vtable_offset": 64
+			},
+			{
+				"name": "virtual_72",
+				"addr": 6442489632,
+				"vtable_offset": 72
+			},
+			{
+				"name": "virtual_80",
+				"addr": 6442489744,
+				"vtable_offset": 80
+			},
+			{
+				"name": "virtual_88",
+				"addr": 6442489760,
+				"vtable_offset": 88
+			}
+		]
+	},
+	{
+		"name": "ConVar",
+		"bases": [
+			{
+				"id": "0",
+				"name": "ConCommandBase",
+				"offset": 0
+			},
+			{
+				"id": "1",
+				"name": "IConVar",
+				"offset": 48
+			}
+		],
+		"vtables": [
+			{
+				"id": "0",
+				"addr": 6442702048,
+				"offset": 0
+			}
+		],
+		"methods": [
+			{
+				"name": "virtual_0",
+				"addr": 6442658736,
+				"vtable_offset": 0
+			},
+			{
+				"name": "virtual_8",
+				"addr": 6442489552,
+				"vtable_offset": 8
+			},
+			{
+				"name": "virtual_16",
+				"addr": 6442489552,
+				"vtable_offset": 16
+			},
+			{
+				"name": "virtual_24",
+				"addr": 6442662320,
+				"vtable_offset": 24
+			},
+			{
+				"name": "virtual_32",
+				"addr": 6442659120,
+				"vtable_offset": 32
+			},
+			{
+				"name": "virtual_40",
+				"addr": 6442662384,
+				"vtable_offset": 40
+			},
+			{
+				"name": "virtual_48",
+				"addr": 6442660480,
+				"vtable_offset": 48
+			},
+			{
+				"name": "virtual_56",
+				"addr": 6442660560,
+				"vtable_offset": 56
+			},
+			{
+				"name": "virtual_64",
+				"addr": 6442660512,
+				"vtable_offset": 64
+			},
+			{
+				"name": "virtual_72",
+				"addr": 6442662368,
+				"vtable_offset": 72
+			},
+			{
+				"name": "virtual_80",
+				"addr": 6442660320,
+				"vtable_offset": 80
+			},
+			{
+				"name": "virtual_88",
+				"addr": 6442660000,
+				"vtable_offset": 88
+			},
+			{
+				"name": "virtual_96",
+				"addr": 6442660752,
+				"vtable_offset": 96
+			},
+			{
+				"name": "virtual_104",
+				"addr": 6442660496,
+				"vtable_offset": 104
+			},
+			{
+				"name": "virtual_112",
+				"addr": 6442660528,
+				"vtable_offset": 112
+			},
+			{
+				"name": "virtual_120",
+				"addr": 6442660304,
+				"vtable_offset": 120
+			},
+			{
+				"name": "virtual_128",
+				"addr": 6442661904,
+				"vtable_offset": 128
+			},
+			{
+				"name": "virtual_136",
+				"addr": 6442661424,
+				"vtable_offset": 136
+			},
+			{
+				"name": "virtual_144",
+				"addr": 6442661648,
+				"vtable_offset": 144
+			},
+			{
+				"name": "virtual_152",
+				"addr": 6442661360,
+				"vtable_offset": 152
+			},
+			{
+				"name": "virtual_160",
+				"addr": 6442659536,
+				"vtable_offset": 160
+			},
+			{
+				"name": "virtual_168",
+				"addr": 6442659248,
+				"vtable_offset": 168
+			}
+		]
+	},
+	{
+		"name": "CTier0AppSystem_class_ISchemaSystem_",
+		"bases": [],
+		"vtables": [],
+		"methods": []
+	},
+	{
+		"name": "ISchemaSystem",
+		"bases": [],
+		"vtables": [],
+		"methods": []
+	},
+	{
+		"name": "CSchemaInstallCallback",
+		"bases": [
+			{
+				"id": "0",
+				"name": "CPostConnectCallback",
+				"offset": 0
+			}
+		],
+		"vtables": [
+			{
+				"id": "0",
+				"addr": 6442703352,
+				"offset": 0
+			}
+		],
+		"methods": [
+			{
+				"name": "virtual_0",
+				"addr": 6442672432,
+				"vtable_offset": 0
+			}
+		]
+	},
+	{
+		"name": "ConCommand",
+		"bases": [
+			{
+				"id": "0",
+				"name": "ConCommandBase",
+				"offset": 0
+			}
+		],
+		"vtables": [
+			{
+				"id": "0",
+				"addr": 6442701912,
+				"offset": 0
+			}
+		],
+		"methods": [
+			{
+				"name": "virtual_0",
+				"addr": 6442658848,
+				"vtable_offset": 0
+			},
+			{
+				"name": "virtual_8",
+				"addr": 6442490416,
+				"vtable_offset": 8
+			},
+			{
+				"name": "virtual_16",
+				"addr": 6442489552,
+				"vtable_offset": 16
+			},
+			{
+				"name": "virtual_24",
+				"addr": 6442662304,
+				"vtable_offset": 24
+			},
+			{
+				"name": "virtual_32",
+				"addr": 6442659104,
+				"vtable_offset": 32
+			},
+			{
+				"name": "virtual_40",
+				"addr": 6442662384,
+				"vtable_offset": 40
+			},
+			{
+				"name": "virtual_48",
+				"addr": 6442490800,
+				"vtable_offset": 48
+			},
+			{
+				"name": "virtual_56",
+				"addr": 6442489872,
+				"vtable_offset": 56
+			},
+			{
+				"name": "virtual_64",
+				"addr": 6442490192,
+				"vtable_offset": 64
+			},
+			{
+				"name": "virtual_72",
+				"addr": 6442662352,
+				"vtable_offset": 72
+			},
+			{
+				"name": "virtual_80",
+				"addr": 6442660320,
+				"vtable_offset": 80
+			},
+			{
+				"name": "virtual_88",
+				"addr": 6442659904,
+				"vtable_offset": 88
+			},
+			{
+				"name": "virtual_96",
+				"addr": 6442660752,
+				"vtable_offset": 96
+			},
+			{
+				"name": "virtual_104",
+				"addr": 6442659152,
+				"vtable_offset": 104
+			},
+			{
+				"name": "virtual_112",
+				"addr": 6442659232,
+				"vtable_offset": 112
+			},
+			{
+				"name": "virtual_120",
+				"addr": 6442660096,
+				"vtable_offset": 120
+			}
+		]
+	},
+	{
+		"name": "IAppSystem",
+		"bases": [],
+		"vtables": [],
+		"methods": []
+	},
+	{
+		"name": "CSchemaType_DeclaredClass",
+		"bases": [
+			{
+				"id": "0",
+				"name": "CSchemaType",
+				"offset": 0
+			}
+		],
+		"vtables": [
+			{
+				"id": "0",
+				"addr": 6442709920,
+				"offset": 0
+			}
+		],
+		"methods": [
+			{
+				"name": "virtual_0",
+				"addr": 6442489536,
+				"vtable_offset": 0
+			},
+			{
+				"name": "virtual_8",
+				"addr": 6442489536,
+				"vtable_offset": 8
+			},
+			{
+				"name": "virtual_16",
+				"addr": 6442491184,
+				"vtable_offset": 16
+			},
+			{
+				"name": "virtual_24",
+				"addr": 6442650080,
+				"vtable_offset": 24
+			},
+			{
+				"name": "virtual_32",
+				"addr": 6442649248,
+				"vtable_offset": 32
+			},
+			{
+				"name": "virtual_40",
+				"addr": 6442649088,
+				"vtable_offset": 40
+			},
+			{
+				"name": "virtual_48",
+				"addr": 6442489584,
+				"vtable_offset": 48
+			},
+			{
+				"name": "virtual_56",
+				"addr": 6442489600,
+				"vtable_offset": 56
+			},
+			{
+				"name": "virtual_64",
+				"addr": 6442491200,
+				"vtable_offset": 64
+			},
+			{
+				"name": "virtual_72",
+				"addr": 6442489632,
+				"vtable_offset": 72
+			},
+			{
+				"name": "virtual_80",
+				"addr": 6442491296,
+				"vtable_offset": 80
+			},
+			{
+				"name": "virtual_88",
+				"addr": 6442489760,
+				"vtable_offset": 88
+			}
+		]
+	},
+	{
+		"name": "CPlaceholderConVar_1",
+		"bases": [
+			{
+				"id": "0",
+				"name": "ConVar_1",
+				"offset": 0
+			},
+			{
+				"id": "1",
+				"name": "ConCommandBase",
+				"offset": 0
+			},
+			{
+				"id": "2",
+				"name": "IConVar",
+				"offset": 48
+			}
+		],
+		"vtables": [
+			{
+				"id": "0",
+				"addr": 6442702496,
+				"offset": 0
+			}
+		],
+		"methods": [
+			{
+				"name": "virtual_0",
+				"addr": 6442662448,
+				"vtable_offset": 0
+			},
+			{
+				"name": "virtual_8",
+				"addr": 6442463248,
+				"vtable_offset": 8
+			},
+			{
+				"name": "virtual_16",
+				"addr": 6442463248,
+				"vtable_offset": 16
+			},
+			{
+				"name": "virtual_24",
+				"addr": 6442463248,
+				"vtable_offset": 24
+			},
+			{
+				"name": "virtual_32",
+				"addr": 6442660536,
+				"vtable_offset": 32
+			},
+			{
+				"name": "virtual_40",
+				"addr": 6442660288,
+				"vtable_offset": 40
+			},
+			{
+				"name": "virtual_48",
+				"addr": 6442662288,
+				"vtable_offset": 48
+			},
+			{
+				"name": "virtual_56",
+				"addr": 6442660592,
+				"vtable_offset": 56
+			},
+			{
+				"name": "virtual_64",
+				"addr": 6442659132,
+				"vtable_offset": 64
+			}
+		]
+	}
+]
