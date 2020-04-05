@@ -79,3 +79,6 @@ void Plat_FreePage(int pid, void* addr, size_t sz);
 
 /* Loads a module into the target process using custom payload */
 bool Plat_InjectModule(int pid, const char* name);
+
+/* Returns a handle to a module in another process's memory */
+void* Plat_GetModuleHandle(int pid, const char* lib);

@@ -14,8 +14,10 @@
 
 #include "platform.h"
 #include "common.h"
-#include "analyze.h"
 #include "lua_def.h"
+
+/* Global half life alyx process ID */
+int g_hla_pid;
 
 void show_help();
 
@@ -47,49 +49,6 @@ int main(int argc, char **argv)
 			show_help();
 			break;
 		}
-	}
-
-	/* Check that the args are not null */
-	if (!module || interfaces.size() <= 0)
-		show_help();
-
-	void *handle = Plat_LoadLibrary(module);
-
-	if (!handle)
-	{
-		printf("Plat_LoadLibrary failed!\n");
-		exit(1);
-	}
-
-	printf("Plat_LoadLibrary: OK, handle=0x%lX\n", handle);
-
-	ResolveLuaFunctions((uintptr_t)handle);
-
-	pfnCreateInterface_t pCreateInterface = reinterpret_cast<pfnCreateInterface_t>(Plat_FindSym(handle, "CreateInterface"));
-
-	if (!pCreateInterface)
-	{
-		printf("Plat_FindSym: Failed to find sym CreateInterface\n");
-		exit(1);
-	}
-
-	printf("Plat_FindSys: OK, pfnCreateInterface=0x%lX\n", pCreateInterface);
-
-	void *vtable = pCreateInterface(interfaces[0], &opt);
-
-	if (opt)
-	{
-		printf("CreateInterface returned IFACE_FAILED\n");
-		exit(1);
-	}
-
-	printf("CreateInterface returned IFACE_OK, vtable=0x%lX\n", vtable);
-	printf("Running analysis..\n");
-
-	if (!IAnalyzer::AnalyzeInterface(interfaces[0], vtable))
-	{
-		printf("IAnalyzer: Failed to analyze interface (likely no analyzer exists for this one yet).\n");
-		exit(1);
 	}
 
 	return 0;

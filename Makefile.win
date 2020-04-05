@@ -1,4 +1,4 @@
-FLAGS=-static-libgcc -static-libstdc++ -Wl,-Bstatic -static -shared 
+FLAGS=-static-libgcc -static-libstdc++ -Wl,-Bstatic -static -shared -std=c++17 -Ithirdparty/picojson
 FLAGS32=-m32
 DEFINES=-D_WIN32 -DWINDOWS -DWIN32 -D_WINDOWS -DWIN64 -D_WIN64
 LIBS=-lpsapi -lkernel32
