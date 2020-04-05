@@ -11,6 +11,7 @@ SRC=$(wildcard src/*.cc)
 all: 
 	mkdir -p bin 
 	x86_64-w64-mingw32-g++ -o bin/hlvrlaunch.exe $(FLAGS) $(DEFINES) $(SRC) $(LIBS)
+	make -C src/modules/launcher -f Makefile.win
 
 clean:
 	rm -rf bin
