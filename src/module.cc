@@ -55,6 +55,8 @@ void LoadLauncher()
 	}
 	else
 	{
+		printf("Launcher library extlauncher.dll injected\n");
+		
 		std::vector<mapping_info_t> mapinfo = Plat_GetMemoryMap(g_hla_pid);
 
 		void* handle = Plat_GetModuleHandle(g_hla_pid, "extlauncher.dll");

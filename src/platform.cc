@@ -312,6 +312,7 @@ std::vector<mapping_info_t> Plat_GetMemoryMap(int pid)
 
 			/* Get and set the module file name */
 			GetModuleFileNameExA(hproc, modules[i], name, MAX_PATH);
+			printf("%s\n", name);
 			info.pathname = strdup(name);
 			info.lib = strdup(strfn(name));
 
@@ -368,7 +369,7 @@ bool Plat_InjectModule(int pid, const char *mod)
 	char buf[MAX_PATH + 1];
 
 	/* Allocate a couple of pages in the target's memory space, where we will put our code */
-	void *addr = VirtualAllocEx(hproc, NULL, 16384, MEM_COMMIT, PAGE_EXECUTE_READWRITE);
+	void *addr = VirtualAllocEx(hproc, NULL, MAX_PATH, MEM_COMMIT | MEM_RESERVE, PAGE_EXECUTE_READWRITE);
 
 	if (!addr)
 	{

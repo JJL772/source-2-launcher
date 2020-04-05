@@ -31,10 +31,10 @@ char* strntrimr(char* buf, int len)
 
 const char* strnfn(const char* buf, int len)
 {
-	for(int i = len-1; i >= 0; i++)
+	for(int i = len-1; i >= 0; i--)
 	{
 		if(buf[i] == PATH_SEP && i < len-1)
 			return &buf[i+1];
 	}
-	return nullptr;
+	return buf;
 }

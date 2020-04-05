@@ -41,6 +41,8 @@ int main(int argc, char **argv)
 		exit(1);
 	}
 
+	printf("Started hlvr.exe pid=%u\n", g_hla_pid);
+
 	/* Try to load the launcher */
 	LoadLauncher();
 
