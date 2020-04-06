@@ -87,3 +87,32 @@ void* Plat_GetModuleHandle(int pid, const char* lib);
 
 /* Creates a new process, returns 0 if the process did not start */
 int Plat_CreateProcess(const char* application, char* cmdline);
+
+namespace platform
+{
+	typedef void* handle;
+
+	int GetPID();
+
+	handle OpenProcess(int pid);
+
+	void CloseProcess(handle hproc);
+
+	handle LoadLibrary(const char* lib);
+
+	handle GetProcAddress(handle lib, const char* sym);
+
+	void FreeLibrary(handle lib);
+
+	bool WriteProcessMemory(handle hproc, uintptr_t addr, void* buf, int len);
+
+	bool ReadProcessMemory(handle hproc, uintptr_t addr, void* recvbuf, int& len);
+
+	void* PageAlloc(handle hproc, size_t npages);
+	void* PageAlloc(size_t npages);
+
+	void PageFree(handle hproc, void* addr, size_t npages);
+	void PageFree(void* addr, size_t npages);
+
+	int CreateProcess(const char* appl, char* cmdline);
+}
