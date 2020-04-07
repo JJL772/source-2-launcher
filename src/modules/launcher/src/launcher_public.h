@@ -133,5 +133,15 @@ public:
 	/**
 	 * Returns the module's exported interface
 	 */ 
-	virtual IModule* GetModuleInterface() = 0;
+	virtual IModule* GetModuleInterface(const char* modname) = 0;
+
+	/**
+	 * Returns the address of the specified symbol 
+	 */ 
+	virtual void* FindSymbol(const char* refname) = 0;
+
+	/**
+	 * Forcibly sets the address of the symbol. The next time it's queried the address will have updated
+	 */ 
+	virtual void SetSymbolAddress(const char* symname, uintptr_t addr) = 0;
 };

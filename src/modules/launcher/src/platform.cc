@@ -62,7 +62,7 @@ int Plat_GetPID()
 #ifdef UNIX
 	return getpid();
 #else
-	return 0;
+	return (int)GetCurrentProcessId();
 #endif
 }
 
@@ -100,7 +100,7 @@ void Plat_ResolveLibMapping()
 		g_mapping_info.push_back(info);
 	}
 #else
-
+	g_mapping_info = Plat_GetMemoryMap(Plat_GetPID());
 #endif
 }
 
@@ -460,4 +460,16 @@ int Plat_CreateProcess(const char* application, char* cmdline)
 void Plat_ShowMessageBox(const char* title, const char* text)
 {
 	MessageBoxA(NULL, (LPCSTR)text, (LPCSTR)title, MB_OK);
+}
+
+uintptr_t Plat_GetModuleBaseAddress(const char* mod)
+{
+	for(auto x : g_mapping_info)
+	{
+		if(strcmp(x.lib, mod) == 0)
+		{
+			return (uintptr_t)x.start;
+		}
+	}
+	return 0;
 }

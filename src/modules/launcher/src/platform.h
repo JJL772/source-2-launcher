@@ -43,6 +43,8 @@ std::vector<mapping_info_t> Plat_GetMemoryMap();
 
 void Plat_ShowMessageBox(const char* title, const char* text);
 
+uintptr_t Plat_GetModuleBaseAddress(const char* mod);
+
 /**
  * 
  * API For working with *other* processes
