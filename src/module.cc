@@ -47,7 +47,7 @@ using namespace std::filesystem;
  */ 
 static void* g_mod_thread_handle;
 
-void LoadLauncher()
+void LoadLauncher(launcher_params_t params)
 {
 	if(!Plat_InjectModule(g_hla_pid, "extensions/extlauncher.dll"))
 	{
@@ -78,7 +78,11 @@ void LoadLauncher()
 		HANDLE hproc = OpenProcess(PROCESS_ALL_ACCESS, FALSE, (DWORD)g_hla_pid);
 		DWORD threadid = 0;
 
-		g_mod_thread_handle = CreateRemoteThread(hproc, NULL, 0, (LPTHREAD_START_ROUTINE)pfnRun, NULL, 0, &threadid);
+		void* addr = Plat_AllocPage(g_hla_pid, 4096);
+		
+		Plat_WriteProcessMemory(g_hla_pid, (uintptr_t)addr, &params, sizeof(launcher_params_t));
+
+		g_mod_thread_handle = CreateRemoteThread(hproc, NULL, 0, (LPTHREAD_START_ROUTINE)pfnRun, addr, 0, &threadid);
 
 		printf("Loaded launcher and created launcher thread\n");
 	}

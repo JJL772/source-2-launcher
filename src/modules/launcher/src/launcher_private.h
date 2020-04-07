@@ -60,10 +60,10 @@ typedef struct {
 
 /*--------------------------------callback, name,        flags,         description, completion callback, unknown */
 typedef void(*RegisterConCommand)(void*,    const char*, unsigned long, const char*, void*,               unsigned long);
-/*-----------------------------value, default,     name,        flags,         description */
-typedef void(*RegisterConvar1)(void*, const char*, const char*, unsigned long, const char*);
-/*-----------------------------value, default,     name,        flags,          description, callback */
-typedef void(*RegisterConvar2)(void*, const char*, const char*, unsigned long,  const char*, void*);
+/*--------------------------------value, default,     name,        flags,         description */
+typedef void(*RegisterConvar1)   (void*, const char*, const char*, unsigned long, const char*);
+/*--------------------------------value, default,     name,        flags,          description, callback */
+typedef void(*RegisterConvar2)   (void*, const char*, const char*, unsigned long,  const char*, void*);
 
 namespace offsets
 {
@@ -115,5 +115,6 @@ namespace log
 	void Error(const char* fmt, ...);
 	void Warn(const char* fmt, ...);
 	void Info(const char* fmt, ...);
+	void DebugTrace(const char* fmt, ...);
 }
 

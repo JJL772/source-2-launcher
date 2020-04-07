@@ -6,6 +6,8 @@
 #include <vector>
 #include <filesystem>
 
+#include "public.h"
+
 extern int g_hla_pid;
 
 struct patch_t
@@ -30,4 +32,4 @@ std::vector<patch_t> LoadPatches(const char* folder);
 
 void ApplyPatch(patch_t patch);
 
-void LoadLauncher();
+void LoadLauncher(launcher_params_t params);

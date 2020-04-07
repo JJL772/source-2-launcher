@@ -21,16 +21,23 @@ int g_hla_pid;
 
 void show_help();
 
-typedef void *(*pfnCreateInterface_t)(const char *, int *);
-static void *l_alloc(void *ud, void *ptr, size_t osize,
-					 size_t nsize);
-
-/* Globals */
-std::vector<char *> interfaces;
-char *module;
-
 int main(int argc, char **argv)
 {
+	launcher_params_t launch_params;
+
+	for(int i = 0; i < argc; i++)
+	{
+		const char* arg = argv[i];
+		if(strcmp(arg, "--debug") == 0)
+		{
+			launch_params.debug = true;
+		}
+		else if(strcmp(arg, "--verbose") == 0)
+		{
+			launch_params.verbose = true;
+		}
+	}
+
 	printf("Attempting to launcher hlvr.exe\n");
 
 	g_hla_pid = Plat_CreateProcess("hlvr.exe", "-windowed -dev -console -vconport 29000 +map startup");
@@ -43,8 +50,17 @@ int main(int argc, char **argv)
 
 	printf("Started hlvr.exe pid=%u\n", g_hla_pid);
 
+	/* Write HLVR PID to a file */
+	FILE* file = fopen("hlvr_pid.txt", "w");
+
+	if(file)
+	{
+		fprintf(file, "%u", g_hla_pid);
+		fclose(file);
+	}
+	
 	/* Try to load the launcher */
-	LoadLauncher();
+	LoadLauncher(launch_params);
 
 	return 0;
 }
@@ -55,18 +71,4 @@ void show_help()
 	printf("\t-i        - Adds an interface to the list of interfaces to look for\n");
 	printf("\t-f        - The file to load\n");
 	exit(1);
-}
-
-static void *l_alloc(void *ud, void *ptr, size_t osize,
-					 size_t nsize)
-{
-	(void)ud;
-	(void)osize; /* not used */
-	if (nsize == 0)
-	{
-		free(ptr);
-		return NULL;
-	}
-	else
-		return realloc(ptr, nsize);
 }
