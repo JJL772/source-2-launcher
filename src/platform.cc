@@ -106,6 +106,15 @@ void Plat_ResolveLibMapping()
 
 void *Plat_GetLibraryHandle(const char *lib)
 {
+	auto map = Plat_GetMemoryMap(Plat_GetPID());
+	for(auto mod : map)
+	{
+		printf("%s\n", mod.lib);
+		if(strcmp(lib, mod.lib) == 0)
+		{
+			return mod.handle;
+		}
+	}
 	return nullptr;
 }
 
@@ -315,6 +324,7 @@ std::vector<mapping_info_t> Plat_GetMemoryMap(int pid)
 			printf("%s\n", name);
 			info.pathname = strdup(name);
 			info.lib = strdup(strfn(name));
+			info.handle = modules[i];
 
 			/* For windows, just set RWX for now */
 			info.perms = mapping_info_t::R | mapping_info_t::W | mapping_info_t::X;
@@ -427,7 +437,7 @@ void *Plat_GetModuleHandle(int pid, const char *lib)
 			if (GetModuleFileNameEx(hproc, modules[i], modname,
 									sizeof(modname) / sizeof(char)))
 			{
-				if(strcmp(modname, lib) == 0)
+				if(strcmp(strfn(modname), strfn(lib)) == 0)
 				{
 					if(!g_proc_handle) CloseHandle(hproc);
 					return modules[i];

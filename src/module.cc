@@ -49,29 +49,37 @@ static void* g_mod_thread_handle;
 
 void LoadLauncher(launcher_params_t params)
 {
-	if(!Plat_InjectModule(g_hla_pid, "extensions/extlauncher.dll"))
+	if(!Plat_InjectModule(g_hla_pid, "launcher/launcher.dll"))
 	{
-		printf("Failed to load extlauncher.dll!\n");
+		printf("Failed to load launcher.dll!\n");
 	}
 	else
 	{
-		printf("Launcher library extlauncher.dll injected\n");
+		printf("Launcher library launcher.dll injected\n");
 		
 		std::vector<mapping_info_t> mapinfo = Plat_GetMemoryMap(g_hla_pid);
 
-		void* handle = Plat_GetModuleHandle(g_hla_pid, "extlauncher.dll");
+		printf("\nMEMORY MAP DUMP:\n");
+		printf("-------------------------------------\n");
+		for(auto map : mapinfo)
+		{
+			printf("%-30s 0x%lX-0x%lX\n", map.lib, map.start, map.end);
+		}
+		printf("-------------------------------------\n\n");
+
+		void* handle = Plat_GetModuleHandle(g_hla_pid, "launcher.dll");
 
 		if(!handle) 
 		{
-			printf("Failed to load extlauncher.dll\n");
+			printf("Failed to load launcher.dll [Invalid handle]\n");
 			return;
 		}
-
+		
 		void* pfnRun = Plat_FindSym(handle, "Run");
 
 		if(!pfnRun) 
 		{
-			printf("Symbol lookup in extlauncher.dll failed: Run not found.\n");
+			printf("Symbol lookup in launcher.dll failed: Run not found.\n");
 			return;
 		}
 		

@@ -2,7 +2,7 @@
 # Makefile for the launcher DLL 
 #
 
-FLAGS=-static-libgcc -static-libstdc++ -Wl,-Bstatic -static -shared 
+FLAGS=-static-libgcc -static-libstdc++ -Wl,-Bstatic -static -shared -I$(TOP)/thirdparty/picojson -std=c++17
 
 FLAGS32=-m32
 
@@ -12,7 +12,7 @@ LIBS=-lpsapi -lkernel32
 
 SRC=$(wildcard src/*.cc)
 
-DLLNAME=extlauncher.dll
+DLLNAME=launcher.dll
 
 all:
 	mkdir -p bin 
@@ -25,4 +25,5 @@ clean:
 	rm -rf bin
 
 install: all
-	# nothing
+	mkdir -p $(PREFIX)/launcher
+	cp -f bin/$(DLLNAME) $(PREFIX)/launcher/

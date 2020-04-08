@@ -312,7 +312,6 @@ std::vector<mapping_info_t> Plat_GetMemoryMap(int pid)
 
 			/* Get and set the module file name */
 			GetModuleFileNameExA(hproc, modules[i], name, MAX_PATH);
-			printf("%s\n", name);
 			info.pathname = strdup(name);
 			info.lib = strdup(strfn(name));
 
@@ -422,12 +421,10 @@ void *Plat_GetModuleHandle(int pid, const char *lib)
 		{
 			char modname[MAX_PATH];
 
-			// Get the full path to the module's file.
-
 			if (GetModuleFileNameEx(hproc, modules[i], modname,
 									sizeof(modname) / sizeof(char)))
 			{
-				if(strcmp(modname, lib) == 0)
+				if(strcmp(strfn(modname), strfn(lib)) == 0)
 				{
 					if(!g_proc_handle) CloseHandle(hproc);
 					return modules[i];

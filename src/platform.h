@@ -28,6 +28,7 @@ struct mapping_info_t
 	size_t inode;
 	char* pathname;
 	char* lib;
+	void* handle;
 };
 
 /* Returns PID of the process */

@@ -225,7 +225,7 @@ void LoadSymbolsFromFile(std::filesystem::path path)
 				symbol_info_t* info = new symbol_info_t();
 				info->sym = obj.get("name").to_str();
 				info->lib = obj.get("lib").to_str();
-				info->offset = obj.get("offset").get<unsigned long>();
+				//info->offset = (uintptr_t)obj.get("offset").get<double>();
 				g_syms.push_back(info);
 			}
 			else

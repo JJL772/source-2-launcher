@@ -21,7 +21,7 @@
  * }
  * 
  */ 
-typedef IModule*(*fnCreateInterface_t)();
+typedef class IModule*(*fnCreateInterface_t)();
 
 /**
  * Base class for all modules
@@ -75,7 +75,7 @@ public:
 	 * Called right after the module has been loaded, 
 	 * @return Return false to immediately unload your module
 	 */ 
-	virtual bool PreInit() = 0;
+	virtual bool PreInit(class ILauncherAPI* plauncherapi) = 0;
 
 	/**
 	 * Called when the module is unloaded. This is not called if your module is unloaded due to 
@@ -90,13 +90,28 @@ public:
  */ 
 class ILoggingSystem
 {
-
+public:
 };
 
-typedef struct 
+/**
+ * Mem management functions
+ * These are hooked from g_pMalloc
+ */ 
+class IMemorySystem
 {
+public:
+	/* Malloc a block of memory */
+	virtual void* malloc(size_t sz) = 0;
 
-} module_functions_t;
+	/* Realloc a block of memory */
+	virtual void* realloc(void* ptr, size_t newsz) = 0;
+
+	/* Free a block of mem */
+	virtual void free(void* ptr) = 0;
+	
+	/* Return the size of the block pointed to by ptr */
+	virtual size_t getsize(void* ptr) = 0;
+};
 
 /**
  * 
@@ -144,4 +159,9 @@ public:
 	 * Forcibly sets the address of the symbol. The next time it's queried the address will have updated
 	 */ 
 	virtual void SetSymbolAddress(const char* symname, uintptr_t addr) = 0;
+
+	/**
+	 * Returns a pointer to the memory system
+	 */ 
+	virtual IMemorySystem* GetMemorySystem() = 0;
 };

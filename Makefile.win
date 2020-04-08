@@ -7,14 +7,17 @@ FLAGS32=-m32
 DEFINES=-D_WIN32 -DWINDOWS -DWIN32 -D_WINDOWS -DWIN64 -D_WIN64
 LIBS=-lpsapi -lkernel32
 SRC=$(wildcard src/*.cc)
+TOP=$(shell pwd)
+PREFIX=/media/LocalDisk/Half-Life\ Alyx/game/bin/win64/
 
 all: 
 	mkdir -p bin 
 	x86_64-w64-mingw32-g++ -o bin/hlvrlaunch.exe $(FLAGS) $(DEFINES) $(SRC) $(LIBS)
-	make -C src/modules/launcher -f Makefile.win
+	make -C src/modules/launcher -f Makefile.win TOP=$(TOP)
 
 clean:
 	rm -rf bin
 
 install: all
-	cp bin/hlvrlaunch.exe /media/LocalDisk/Half-Life\ Alyx/game/bin/win64/
+	cp -f bin/hlvrlaunch.exe $(PREFIX)/
+	make -C src/modules/launcher -f Makefile.win TOP="$(TOP)" PREFIX="$(PREFIX)" install
