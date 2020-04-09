@@ -33,7 +33,7 @@ mem_functions_t g_mem_functions;
 log_functions_t g_log_functions;
 
 /* Called by the main launcher after being loaded in */
-LAUNCHER_API int Run(void* param)
+LAUNCHER_API void Run()
 {
 	/* Get the launcher parameters */
 	launcher_params_t* params = (launcher_params_t*)param;
@@ -44,7 +44,7 @@ LAUNCHER_API int Run(void* param)
 	if(!htier0)
 	{
 		Plat_ShowMessageBox("Fatal Error", "Failed to open tier0.dll");
-		return 0;
+		return;
 	}
 
 	Plat_ShowMessageBox("LOADED", "LOAD");
@@ -62,10 +62,7 @@ LAUNCHER_API int Run(void* param)
 	g_log_functions.LoggingSystem_SetChannelColor = (fnLoggingSystem_SetChannelColor_t)Plat_FindSym(htier0, "LoggingSystem_SetChannelColor");
 	g_log_functions.LoggingSystem_SetChannelVerbosity = (fnLoggingSystem_SetChannelVerbosity_t)Plat_FindSym(htier0, "LoggingSystem_SetChannelVerbosity");
 
-	g_log_functions.ConMsg("BRUHMOMENTBRUHMOMENT\n\n\n\n");
-	g_log_functions.ConMsg("BRUHMOMENTBRUHMOMENT\n\n\n\n");
-	g_log_functions.ConMsg("BRUHMOMENTBRUHMOMENT\n\n\n\n");
-	g_log_functions.ConMsg("BRUHMOMENTBRUHMOMENT\n\n\n\n");
+	g_log_functions.ConMsg("Test\n\n\n\n");
 
 	/* Lookup g_pMalloc */
 	g_pMalloc = Plat_FindSym(htier0, "g_pMalloc");
@@ -76,8 +73,11 @@ LAUNCHER_API int Run(void* param)
 	g_mem_functions.malloc = reinterpret_cast<fnMalloc_t>((void*)((uintptr_t)g_pMalloc + mem_functions_t::malloc_offset));
 	g_mem_functions.realloc = reinterpret_cast<fnRealloc_t>((void*)((uintptr_t)g_pMalloc + mem_functions_t::realloc_offset));
 	g_mem_functions.free = reinterpret_cast<fnFree_t>((void*)((uintptr_t)g_pMalloc + mem_functions_t::free_offset));
-	
-	return 0;
+}
+
+LAUNCHER_API void Shutdown()
+{
+
 }
 
 class CMemorySystem : public IMemorySystem
@@ -165,3 +165,5 @@ class CLoggingSystem : public ILoggingSystem
 {
 
 };
+
+static CStaticCallWrapper g_init_fn(Run, Shutdown);

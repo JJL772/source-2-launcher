@@ -27,24 +27,6 @@
 
 using namespace std::filesystem;
 
-/**
- * GetModuleInterface
- * 
- * This function will return the module interface for the module.
- * It's a pointer to a class of a module-defined type, containing virtual methods that
- * other modules can call
- * 
- * Example:
- * 
- * class IMyModule
- * {
- * 		virtual int GetVersion() = 0;
- * };
- * 
- * Then, you can derive a class from IMyModule and return an instance of that class in GetModuleInterface
- * Any other module can now load your module's data
- * 
- */ 
 static void* g_mod_thread_handle;
 
 void LoadLauncher(launcher_params_t params)

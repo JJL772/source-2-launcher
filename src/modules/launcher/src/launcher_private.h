@@ -147,3 +147,23 @@ struct log_functions_t
 	fnLoggingSystem_SetChannelVerbosity_t LoggingSystem_SetChannelVerbosity;
 	fnLoggingSystem_SetChannelColor_t LoggingSystem_SetChannelColor;
 };
+
+class CStaticCallWrapper
+{
+	typedef void(*StartFn)();
+	typedef void(*StopFn)();
+	StartFn pStart;
+	StopFn pStop;
+public:
+	CStaticCallWrapper(StartFn start, StopFn stop) :
+		pStart(start),
+		pStop(stop)
+	{
+		pStart();
+	}
+
+	~CStaticCallWrapper()
+	{
+		pStop();
+	}
+};
