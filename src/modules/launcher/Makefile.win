@@ -14,12 +14,14 @@ SRC=$(wildcard src/*.cc)
 
 DLLNAME=launcher.dll
 
-all:
+all: notify 
 	mkdir -p bin 
 	x86_64-w64-mingw32-g++ -o bin/$(DLLNAME) $(FLAGS) $(DEFINES) $(SRC) $(LIBS)
 	mkdir -p include
 	cp src/launcher_public.h ./include
 
+notify:
+	@echo -e "\e[94m =========== Building launcher.dll =========== \e[39m"
 
 clean:
 	rm -rf bin

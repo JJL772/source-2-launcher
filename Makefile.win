@@ -10,14 +10,19 @@ SRC=$(wildcard src/*.cc)
 TOP=$(shell pwd)
 PREFIX=/media/LocalDisk/Half-Life\ Alyx/game/bin/win64/
 
-all: 
-	mkdir -p bin 
-	x86_64-w64-mingw32-g++ -o bin/hlvrlaunch.exe $(FLAGS) $(DEFINES) $(SRC) $(LIBS)
+all: notify build 
 	make -C src/modules/launcher -f Makefile.win TOP=$(TOP)
+
+notify:
+	@echo -e "\e[94m =========== Building launcher.exe =========== \e[39m"
 
 clean:
 	rm -rf bin
 
-install: all
+build:
+	mkdir -p bin 
+	x86_64-w64-mingw32-g++ -o bin/hlvrlaunch.exe $(FLAGS) $(DEFINES) $(SRC) $(LIBS)
+	
+install: notify build
 	cp -f bin/hlvrlaunch.exe $(PREFIX)/
 	make -C src/modules/launcher -f Makefile.win TOP="$(TOP)" PREFIX="$(PREFIX)" install
