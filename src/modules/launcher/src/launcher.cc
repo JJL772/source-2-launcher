@@ -16,8 +16,6 @@
 #include "platform.h"
 #include "util.h"
 
-#include "../../../common.h"
-
 /* Forward decls */
 class CMemorySystem;
 class CLoggingSystem;
@@ -25,7 +23,7 @@ class CLauncherAPI;
 
 #define LAUNCHER_API extern "C" __attribute__((dllexport))
 
-const char* g_game_version = "1.1";
+std::string g_game_version;
 
 /* Memory allocator address & functions */
 void* g_pMalloc;
@@ -35,9 +33,6 @@ log_functions_t g_log_functions;
 /* Called by the main launcher after being loaded in */
 LAUNCHER_API void Run()
 {
-	/* Get the launcher parameters */
-	launcher_params_t* params = (launcher_params_t*)param;
-
 	/* Load the handle of tier0.dll, is already loaded */
 	void* htier0 = Plat_LoadLibrary("tier0.dll");
 
@@ -46,8 +41,6 @@ LAUNCHER_API void Run()
 		Plat_ShowMessageBox("Fatal Error", "Failed to open tier0.dll");
 		return;
 	}
-
-	Plat_ShowMessageBox("LOADED", "LOAD");
 
 	/* Get the various tier0 symbols we need */
 	g_log_functions.ConMsg = (fnConMsg_t)Plat_FindSym(htier0, "ConMsg");
@@ -73,6 +66,9 @@ LAUNCHER_API void Run()
 	g_mem_functions.malloc = reinterpret_cast<fnMalloc_t>((void*)((uintptr_t)g_pMalloc + mem_functions_t::malloc_offset));
 	g_mem_functions.realloc = reinterpret_cast<fnRealloc_t>((void*)((uintptr_t)g_pMalloc + mem_functions_t::realloc_offset));
 	g_mem_functions.free = reinterpret_cast<fnFree_t>((void*)((uintptr_t)g_pMalloc + mem_functions_t::free_offset));
+
+	/* Get some of the key values from the config */
+	ParseConfig();
 }
 
 LAUNCHER_API void Shutdown()

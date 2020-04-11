@@ -13,31 +13,16 @@
 #include <string.h>
 
 #include "platform.h"
-#include "common.h"
-#include "lua_def.h"
 
 /* Global half life alyx process ID */
 int g_hla_pid;
 
 void show_help();
 
+extern void LoadLauncher();
+
 int main(int argc, char **argv)
 {
-	launcher_params_t launch_params;
-
-	for(int i = 0; i < argc; i++)
-	{
-		const char* arg = argv[i];
-		if(strcmp(arg, "--debug") == 0)
-		{
-			launch_params.debug = true;
-		}
-		else if(strcmp(arg, "--verbose") == 0)
-		{
-			launch_params.verbose = true;
-		}
-	}
-
 	printf("Attempting to launcher hlvr.exe\n");
 
 	g_hla_pid = Plat_CreateProcess("hlvr.exe", "-windowed -dev -console -vconport 29000 +map startup");
@@ -60,7 +45,7 @@ int main(int argc, char **argv)
 	}
 	
 	/* Try to load the launcher */
-	LoadLauncher(launch_params);
+	LoadLauncher();
 
 	return 0;
 }

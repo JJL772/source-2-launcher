@@ -161,6 +161,17 @@ public:
 	virtual void SetSymbolAddress(const char* symname, uintptr_t addr) = 0;
 
 	/**
+	 * Returns the value of a variable
+	 * Returns empty string if var is unset or not found
+	 */ 
+	virtual std::string GetVariableValue(const char* var) = 0;
+
+	/**
+	 * Sets the value of a varible
+	 */ 
+	virtual void SetVariableValue(const char* var, std::string val) = 0;
+
+	/**
 	 * Returns a pointer to the memory system
 	 */ 
 	virtual IMemorySystem* GetMemorySystem() = 0;

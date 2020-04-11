@@ -65,7 +65,8 @@ Common Definitions
 
 ==================================
 */
-extern const char* g_game_version;
+void ParseConfig();
+extern std::string g_game_version;
 
 #pragma pack(1)
 typedef struct {

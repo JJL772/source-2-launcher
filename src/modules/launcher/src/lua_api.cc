@@ -8,7 +8,7 @@ Implementation for various lua things
 
 #define LUA_DEF_CPP
 
-#include "lua_def.h"
+#include "lua_api.h"
 
 #undef LUA_FUNC
 #define LUA_FUNC RESOLVE_LUA_FN

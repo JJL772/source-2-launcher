@@ -4,6 +4,9 @@
  * 
  * Configuration of the launcher by means of random json files
  * 
+ * TODO List:
+ * 	-	A lot of the json syntax checking could be replaced with neat templated functions
+ * 
  */
 #include <stdio.h>
 #include <stdint.h>
@@ -18,6 +21,35 @@
 #include "platform.h"
 
 using namespace std;
+
+class CSyntaxContext
+{
+	const char* file;
+	const char* function;
+	static std::vector<CSyntaxContext*> ctx_stack;
+public:
+	CSyntaxContext(const char* file, const char* function)
+	{
+		this->file = file;
+		this->function = function;
+		CSyntaxContext::ctx_stack.push_back(this);
+	}
+
+	~CSyntaxContext()
+	{
+		ctx_stack.pop_back();
+	}
+
+	void SyntaxError(const char* fmt, ...)
+	{
+
+	}
+
+	void SyntaxWarning(const char* fmt, ...)
+	{
+
+	}
+};
 
 /**
  * Launcher file source tree:
@@ -35,7 +67,8 @@ using namespace std;
  * 		"args": [
  * 			"-novr",
  * 			"-windowed"
- * 		]
+ * 		],
+ * 		"version": "1.2.1" // Game version. This will need to be changed when the game is updated
  * }
  * 
  * Format of modules.json
@@ -57,6 +90,7 @@ using namespace std;
  * 		{
  * 			"version-major": 1,
  * 			"version-minor": 2,
+ * 			"version-patch": 1,
  * 			"checksums": [
  * 				{
  * 					"name": "tier0.dll",
@@ -67,6 +101,7 @@ using namespace std;
  * 		{
  * 			"version-major": 1,
  * 			"version-minor": 1,
+ * 			"version-patch": 0,
  * 			"checksums": [
  * 				{
  * 					"name": "tier0.dll",
@@ -84,18 +119,29 @@ using namespace std;
  * 		{
  * 			"name": "cvar_regsiter1",
  * 			"lib": "engine.dll",
- * 			"offset": 1234
+ * 			"offset": 1234,
+ * 			"version": "1.2.0" // Optional version string this symbol will be enabled for
+ * 		},
+ * 		{
+ * 			"name": "test1",
+ * 			"lib": "engine2.dll",
+ * 			"signature": "^dddddddddddd" // In this, the ^ means the symbol's offset should be anchored to the start of the hex string
+ * 		}
+ * 		{
+ * 			"name": "test2",
+ * 			"lib": "engine2.dll",
+ * 			"signature": "dddd^dddddddd" // In this, the ^ means the symbol's offset should be located after the second byte of the hex string
  * 		}
  * 		...
  * ]
  * 
  * This is an easy method of specifying versioned symbols which can be looked up via name. Every json in launcher/symbols/ will be 
  * loaded, thus, it's an easy means of specifying symbols for your module.
+ * Signatures will be scanned 
  * 
  */
 
 static std::vector<symbol_info_t *> g_syms;
-
 
 std::vector<module_info_t> GetModulesToLoad()
 {
@@ -103,6 +149,7 @@ std::vector<module_info_t> GetModulesToLoad()
 
 	if (filesystem::exists("launcher/modules.json"))
 	{
+		CSyntaxContext logctx = CSyntaxContext("launcher/modules.json", "GetModulesToLoad()");
 		ifstream fs;
 		fs.open("launcher/modules.json", ios::in);
 
@@ -116,7 +163,7 @@ std::vector<module_info_t> GetModulesToLoad()
 
 		if (fs.fail())
 		{
-			ReportSyntaxError("launcher/modules.json", picojson::get_last_error().c_str());
+			logctx.SyntaxError(picojson::get_last_error().c_str());
 		}
 		else if (root.is<picojson::array>())
 		{
@@ -124,20 +171,20 @@ std::vector<module_info_t> GetModulesToLoad()
 			{
 				if (!obj.is<picojson::object>())
 				{
-					ReportSyntaxError("launcher/modules.json", "expected object, but got another type.");
+					logctx.SyntaxError("expected object, but got other type");
 					continue;
 				}
 
 				/* Check if we've got the required fields */
 				if (!obj.contains("enabled"))
 				{
-					ReportSyntaxError("launcher/modules.json", "Object has no field \'enabled\'");
+					logctx.SyntaxError("Object has no field 'enabled'");
 					continue;
 				}
 
 				if (!obj.contains("module"))
 				{
-					ReportSyntaxError("launcher/modules.json", "Object has no field \'module\'");
+					logctx.SyntaxError("Object has no field 'module'");
 					continue;
 				}
 
@@ -150,7 +197,7 @@ std::vector<module_info_t> GetModulesToLoad()
 		}
 		else
 		{
-			ReportSyntaxError("launcher/modules.json", "Root element is not an array.");
+			logctx.SyntaxError("Root element is not an array");
 		}
 	}
 
@@ -218,7 +265,7 @@ void LoadSymbolsFromFile(std::filesystem::path path)
 				}
 
 				std::string ver = obj.get("version").to_str();
-				if(strcmp(ver.c_str(), g_game_version) != 0)
+				if(ver != g_game_version)
 					continue;
 
 				/* Fill in the symbol info */
@@ -275,4 +322,36 @@ symbol_info_t *FindSymbol(std::string sym)
 			return x;
 	}
 	return nullptr;
+}
+
+void ParseConfig()
+{
+	CSyntaxContext ctx("launcher/conf.json", "ParseConfig()");
+	ifstream fs;
+	fs.open("launcher/conf.json");
+
+	if(!fs.good())
+	{
+		ctx.SyntaxError("Failed to open file");
+		return;
+	}
+
+	picojson::value root;
+	picojson::parse(root, fs);
+
+	if(fs.fail())
+	{
+		ctx.SyntaxError(picojson::get_last_error().c_str());
+	}
+	else if(root.is<picojson::object>())
+	{
+		if(root.contains("version") && root.get("version").is<std::string>())
+		{
+			g_game_version = root.get("version").get<std::string>();
+		}
+		else
+		{
+			ctx.SyntaxError("version field is wrong type of doesn't exist");
+		}
+	}
 }
